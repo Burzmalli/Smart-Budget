@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D85241AE1C704A42007CE555 /* SummaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85241AD1C704A42007CE555 /* SummaryManager.swift */; };
 		D8C7A9941C5F0F0E00B37FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */; };
-		D8C7A9961C5F0F0E00B37FAB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9951C5F0F0E00B37FAB /* FirstViewController.swift */; };
-		D8C7A9981C5F0F0E00B37FAB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9971C5F0F0E00B37FAB /* SecondViewController.swift */; };
+		D8C7A9961C5F0F0E00B37FAB /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9951C5F0F0E00B37FAB /* SummaryViewController.swift */; };
+		D8C7A9981C5F0F0E00B37FAB /* AcctViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9971C5F0F0E00B37FAB /* AcctViewController.swift */; };
 		D8C7A99B1C5F0F0E00B37FAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9991C5F0F0E00B37FAB /* Main.storyboard */; };
 		D8C7A99D1C5F0F0E00B37FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A99C1C5F0F0E00B37FAB /* Assets.xcassets */; };
 		D8C7A9A01C5F0F0E00B37FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A99E1C5F0F0E00B37FAB /* LaunchScreen.storyboard */; };
+		D8C7A9AA1C5F158400B37FAB /* TransViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9A91C5F158400B37FAB /* TransViewController.swift */; };
+		D8C7A9AD1C5F190F00B37FAB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9AC1C5F190F00B37FAB /* Account.swift */; };
+		D8C7A9AF1C5F191D00B37FAB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9AE1C5F191D00B37FAB /* Transaction.swift */; };
+		D8C7A9B11C5F210E00B37FAB /* AccountCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9B01C5F210E00B37FAB /* AccountCache.swift */; };
+		D8C7A9B31C5F211A00B37FAB /* TransactionCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9B21C5F211A00B37FAB /* TransactionCache.swift */; };
+		D8C7A9BE1C5F380400B37FAB /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9BB1C5F380400B37FAB /* circle.png */; };
+		D8C7A9BF1C5F380400B37FAB /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9BC1C5F380400B37FAB /* square.png */; };
+		D8C7A9C01C5F380400B37FAB /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9BD1C5F380400B37FAB /* triangle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D85241AD1C704A42007CE555 /* SummaryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryManager.swift; sourceTree = "<group>"; };
 		D8C7A9901C5F0F0E00B37FAB /* Smart-Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart-Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8C7A9951C5F0F0E00B37FAB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D8C7A9971C5F0F0E00B37FAB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D8C7A9951C5F0F0E00B37FAB /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		D8C7A9971C5F0F0E00B37FAB /* AcctViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcctViewController.swift; sourceTree = "<group>"; };
 		D8C7A99A1C5F0F0E00B37FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8C7A99C1C5F0F0E00B37FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C7A99F1C5F0F0E00B37FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8C7A9A11C5F0F0E00B37FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C7A9A91C5F158400B37FAB /* TransViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransViewController.swift; sourceTree = "<group>"; };
+		D8C7A9AC1C5F190F00B37FAB /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		D8C7A9AE1C5F191D00B37FAB /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		D8C7A9B01C5F210E00B37FAB /* AccountCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCache.swift; sourceTree = "<group>"; };
+		D8C7A9B21C5F211A00B37FAB /* TransactionCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCache.swift; sourceTree = "<group>"; };
+		D8C7A9BB1C5F380400B37FAB /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = Images/circle.png; sourceTree = "<group>"; };
+		D8C7A9BC1C5F380400B37FAB /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square.png; path = Images/square.png; sourceTree = "<group>"; };
+		D8C7A9BD1C5F380400B37FAB /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = triangle.png; path = Images/triangle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,40 @@
 		D8C7A9921C5F0F0E00B37FAB /* Smart-Budget */ = {
 			isa = PBXGroup;
 			children = (
+				D8C7A9B41C5F374C00B37FAB /* Images */,
+				D8C7A9AB1C5F18ED00B37FAB /* Model */,
 				D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */,
-				D8C7A9951C5F0F0E00B37FAB /* FirstViewController.swift */,
-				D8C7A9971C5F0F0E00B37FAB /* SecondViewController.swift */,
+				D8C7A9951C5F0F0E00B37FAB /* SummaryViewController.swift */,
+				D8C7A9971C5F0F0E00B37FAB /* AcctViewController.swift */,
 				D8C7A9991C5F0F0E00B37FAB /* Main.storyboard */,
 				D8C7A99C1C5F0F0E00B37FAB /* Assets.xcassets */,
 				D8C7A99E1C5F0F0E00B37FAB /* LaunchScreen.storyboard */,
 				D8C7A9A11C5F0F0E00B37FAB /* Info.plist */,
+				D8C7A9A91C5F158400B37FAB /* TransViewController.swift */,
 			);
 			path = "Smart-Budget";
+			sourceTree = "<group>";
+		};
+		D8C7A9AB1C5F18ED00B37FAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8C7A9AC1C5F190F00B37FAB /* Account.swift */,
+				D8C7A9AE1C5F191D00B37FAB /* Transaction.swift */,
+				D8C7A9B01C5F210E00B37FAB /* AccountCache.swift */,
+				D8C7A9B21C5F211A00B37FAB /* TransactionCache.swift */,
+				D85241AD1C704A42007CE555 /* SummaryManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D8C7A9B41C5F374C00B37FAB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D8C7A9BB1C5F380400B37FAB /* circle.png */,
+				D8C7A9BC1C5F380400B37FAB /* square.png */,
+				D8C7A9BD1C5F380400B37FAB /* triangle.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +136,9 @@
 		D8C7A9881C5F0F0E00B37FAB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					transactionList,
+				);
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Joseph Williams";
@@ -126,8 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C7A9A01C5F0F0E00B37FAB /* LaunchScreen.storyboard in Resources */,
+				D8C7A9C01C5F380400B37FAB /* triangle.png in Resources */,
 				D8C7A99D1C5F0F0E00B37FAB /* Assets.xcassets in Resources */,
+				D8C7A9BF1C5F380400B37FAB /* square.png in Resources */,
 				D8C7A99B1C5F0F0E00B37FAB /* Main.storyboard in Resources */,
+				D8C7A9BE1C5F380400B37FAB /* circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C7A9981C5F0F0E00B37FAB /* SecondViewController.swift in Sources */,
+				D8C7A9AD1C5F190F00B37FAB /* Account.swift in Sources */,
+				D8C7A9981C5F0F0E00B37FAB /* AcctViewController.swift in Sources */,
+				D8C7A9AF1C5F191D00B37FAB /* Transaction.swift in Sources */,
+				D8C7A9B31C5F211A00B37FAB /* TransactionCache.swift in Sources */,
 				D8C7A9941C5F0F0E00B37FAB /* AppDelegate.swift in Sources */,
-				D8C7A9961C5F0F0E00B37FAB /* FirstViewController.swift in Sources */,
+				D8C7A9B11C5F210E00B37FAB /* AccountCache.swift in Sources */,
+				D85241AE1C704A42007CE555 /* SummaryManager.swift in Sources */,
+				D8C7A9AA1C5F158400B37FAB /* TransViewController.swift in Sources */,
+				D8C7A9961C5F0F0E00B37FAB /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +345,7 @@
 				D8C7A9A61C5F0F0E00B37FAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
