@@ -10,6 +10,7 @@ import Foundation
 
 class Transaction: NSObject, NSCoding
 {
+    var Id: Int
     var Name: String?
     var Amount: Double!
     var Date: NSDate!
@@ -19,6 +20,7 @@ class Transaction: NSObject, NSCoding
     
     override init()
     {
+        Id = 0
         Name = ""
         Amount = 0.0
         Date = nil

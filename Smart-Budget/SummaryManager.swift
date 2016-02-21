@@ -72,8 +72,7 @@ class SummaryManager
     //transactions arrays
     static func SaveBudget()
     {
-        NSKeyedArchiver.archiveRootObject(acctCache, toFile: AcctURL.path!)
-        NSKeyedArchiver.archiveRootObject(transCache, toFile: TransURL.path!)
+        
     }
     
     //Loads the budget (accounts and transactions arrays) from
@@ -95,4 +94,5 @@ class SummaryManager
             transCache = tempTransCache!
         }
     }
+    
 }

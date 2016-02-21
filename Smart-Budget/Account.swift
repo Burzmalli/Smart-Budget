@@ -10,12 +10,14 @@ import Foundation
 
 class Account: NSObject, NSCoding
 {
+    var Id: Int
     var Name: String?
     var Balance: Double!
     var StartDate: NSDate!
     
     override init()
     {
+        Id = 0
         Name = ""
         Balance = 0.0
     }
