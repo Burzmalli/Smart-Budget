@@ -52,7 +52,7 @@ class SummaryManager
                 
                 //Ensure the most recent transaction is set
                 if(PreviousTrans.Date == nil
-                    || trans.Date.compare(PreviousTrans.Date) == NSComparisonResult.OrderedDescending)
+                    || trans.getLastDate(date).compare(PreviousTrans.getLastDate(date)) == NSComparisonResult.OrderedDescending)
                 {
                     PreviousTrans = trans
                 }
@@ -60,7 +60,7 @@ class SummaryManager
             else //Logic to set the next transaction variable
             {
                 if(NextTrans.Date == nil
-                    || trans.Date.compare(NextTrans.Date) == NSComparisonResult.OrderedAscending)
+                    || trans.getNextDate(date).compare(NextTrans.getNextDate(date)) == NSComparisonResult.OrderedAscending)
                 {
                     NextTrans = trans
                 }
@@ -68,16 +68,51 @@ class SummaryManager
         }
     }
     
-    //Saves the budget to archive in the form of accounts and
-    //transactions arrays
+    //Saves the budget to database, migrating from archive saving to database
+    //Ensure backwards compatibility with previous versions
     static func SaveBudget()
     {
+        var deleteArchive = true
+        //Save all accounts to database
+        for acct in acctCache.RetrieveAllAccounts()
+        {
+            if(!DatabaseManager.InsertAccount(acct))
+            {
+                deleteArchive = false
+            }
+        }
         
+        //Save all transactions to database
+        for trans in transCache.RetrieveAllTransactions()
+        {
+            if(!DatabaseManager.InsertTransaction(trans))
+            {
+                deleteArchive = false
+            }
+        }
+        
+        //If all saves passed, ensure budget can be loaded from database
+        //then delete archives if save/load with database is successful
+        if(deleteArchive)
+        {
+            if( LoadBudgetFromDb())
+            {
+                do
+                {
+                    try NSFileManager().removeItemAtURL(AcctURL)
+                    try NSFileManager().removeItemAtURL(TransURL)
+                }
+                catch
+                {
+                    
+                }
+            }
+        }
     }
     
-    //Loads the budget (accounts and transactions arrays) from
-    //archive
-    static func LoadBudget()
+    //Attempts to load budget from archive
+    //Used only for backwards compatibility with previous versions
+    static func LoadBudget()->Bool
     {
         //Attempt to load arrays from archive
         let tempAcctCache = NSKeyedUnarchiver.unarchiveObjectWithFile(AcctURL.path!) as? AccountCache
@@ -88,11 +123,38 @@ class SummaryManager
         {
             acctCache = tempAcctCache!
         }
+        else
+        {
+            return false
+        }
         
         if(tempTransCache != nil)
         {
             transCache = tempTransCache!
         }
+        else
+        {
+            return false
+        }
+        
+        return true
     }
     
+    //Loads budget from DB rather than archive
+    static func LoadBudgetFromDb()->Bool
+    {
+        if(!acctCache.loadFromDb())
+        {
+            return false
+        }
+        
+        if(!transCache.loadFromDb())
+        {
+            return false
+        }
+        
+        UpdateSummary(NSDate())
+        
+        return true
+    }
 }

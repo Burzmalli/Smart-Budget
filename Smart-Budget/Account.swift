@@ -14,12 +14,14 @@ class Account: NSObject, NSCoding
     var Name: String?
     var Balance: Double!
     var StartDate: NSDate!
+    var Active: Bool
     
     override init()
     {
         Id = 0
         Name = ""
         Balance = 0.0
+        Active = true
     }
     
     func getDescription() -> String

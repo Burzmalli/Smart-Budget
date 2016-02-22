@@ -23,8 +23,6 @@ class AcctViewController: UIViewController, UITableViewDataSource, UITableViewDe
         anAccount.Balance = Double(acctBalance.text!);
         SummaryManager.acctCache.CreateAccount(anAccount)
         accountList.reloadData()
-        
-        SummaryManager.SaveBudget()
     }
     
     @IBAction func deleteAccount(sender: AnyObject)

@@ -18,6 +18,7 @@ class AccountCache: NSObject, NSCoding
         if(IsAcctUnique(thisAccount))
         {
             Accounts.append(thisAccount);
+            DatabaseManager.InsertAccount(thisAccount)
             return true;
         }
         
@@ -37,6 +38,8 @@ class AccountCache: NSObject, NSCoding
             if(entry.Name! == thisAccount.Name!)
             {
                 Accounts.removeAtIndex(idx);
+                DatabaseManager.DeactivateAccount(thisAccount.Id)
+                thisAccount.Active = false
                 break;
             }
             idx++;
@@ -69,5 +72,17 @@ class AccountCache: NSObject, NSCoding
     func encodeWithCoder(aCoder: NSCoder)
     {
         aCoder.encodeObject(self.Accounts, forKey: "Accounts")
+    }
+    
+    func loadFromDb()->Bool
+    {
+        Accounts = DatabaseManager.GetAllAccounts()
+        
+        if(Accounts.count < 1)
+        {
+            return false
+        }
+        
+        return true
     }
 }

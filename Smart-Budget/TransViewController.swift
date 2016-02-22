@@ -34,8 +34,6 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
         aTransaction.Recurring = recurringSwitch.on
         SummaryManager.transCache.CreateTransaction(aTransaction)
         transactionList.reloadData()
-        
-        SummaryManager.SaveBudget()
     }
     
     @IBAction func deleteTransaction(sender: AnyObject)

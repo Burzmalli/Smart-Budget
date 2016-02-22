@@ -279,19 +279,19 @@
                                             <constraint firstAttribute="width" constant="272" id="F0e-oW-C6c"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WuP-Io-fDt">
-                                        <rect key="frame" x="115" y="80" width="120" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WuP-Io-fDt">
+                                        <rect key="frame" x="86" y="80" width="178" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="226-Fe-mQC">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="226-Fe-mQC">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
                                                 <state key="normal" title="Add"/>
                                                 <connections>
                                                     <action selector="addAccount:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="YDR-tD-nYK"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56l-Sn-64k">
-                                                <rect key="frame" x="75" y="0.0" width="45" height="30"/>
-                                                <state key="normal" title="Delete"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56l-Sn-64k">
+                                                <rect key="frame" x="104" y="0.0" width="74" height="30"/>
+                                                <state key="normal" title="Deactivate"/>
                                                 <connections>
                                                     <action selector="deleteAccount:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="c02-CK-aMi"/>
                                                 </connections>

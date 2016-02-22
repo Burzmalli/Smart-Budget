@@ -15,6 +15,7 @@ class TransactionCache: NSObject, NSCoding
     func CreateTransaction(thisTransaction: Transaction)-> Bool
     {
         Transactions.append(thisTransaction);
+        DatabaseManager.InsertTransaction(thisTransaction)
         return true;
     }
     
@@ -33,6 +34,7 @@ class TransactionCache: NSObject, NSCoding
             && entry.Date == thisTransaction.Date)
             {
                 Transactions.removeAtIndex(idx);
+                DatabaseManager.DeleteTransaction(thisTransaction.Id)
                 break;
             }
             idx++;
@@ -51,5 +53,18 @@ class TransactionCache: NSObject, NSCoding
     func encodeWithCoder(aCoder: NSCoder)
     {
         aCoder.encodeObject(self.Transactions, forKey: "Transactions")
+    }
+    
+    //Loads data from the database rather than archive
+    func loadFromDb()->Bool
+    {
+        Transactions = DatabaseManager.GetAllTransactions()
+        
+        if(Transactions.count < 1)
+        {
+            return false
+        }
+        
+        return true
     }
 }

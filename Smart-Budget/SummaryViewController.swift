@@ -35,7 +35,13 @@ class SummaryViewController: UIViewController {
         summaryDate.datePickerMode = UIDatePickerMode.Date
         summaryDate.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         
-        SummaryManager.LoadBudget()
+        //DatabaseManager.CreateDatabase(true)
+        
+        //Open database connection
+        DatabaseManager.ConnectToDatabase()
+        
+        //Load data from the database
+        SummaryManager.LoadBudgetFromDb()
         
         //Set the initial state of the summary fields
         UpdateSummaryFields()
@@ -79,7 +85,7 @@ class SummaryViewController: UIViewController {
         
         SetLabelTextFromDollarValue(lastValue, amt: SummaryManager.PreviousTrans.Amount)
         
-        lastDate.text = SummaryManager.PreviousTrans.getDateString()
+        lastDate.text = SummaryManager.PreviousTrans.getLastDateString(summaryDate.date)
         
         if(SummaryManager.NextTrans.Acct == nil)
         {
@@ -93,7 +99,7 @@ class SummaryViewController: UIViewController {
         
         SetLabelTextFromDollarValue(nextValue, amt: SummaryManager.NextTrans.Amount)
         
-        nextDate.text = SummaryManager.NextTrans.getDateString()
+        nextDate.text = SummaryManager.NextTrans.getNextDateString(summaryDate.date)
     }
     
     //Sets a labels text to the formatted dollar value

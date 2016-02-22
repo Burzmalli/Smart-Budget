@@ -16,7 +16,7 @@ class Transaction: NSObject, NSCoding
     var Date: NSDate!
     var Acct: Account!
     var Recurring = false
-    var EndDate: NSDate?
+    var EndDate: NSDate!
     
     override init()
     {
@@ -24,6 +24,7 @@ class Transaction: NSObject, NSCoding
         Name = ""
         Amount = 0.0
         Date = nil
+        EndDate = NSDate.distantFuture()
         Acct = nil
     }
     
@@ -38,6 +39,30 @@ class Transaction: NSObject, NSCoding
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.ShortStyle
         return formatter.stringFromDate(Date)
+    }
+    
+    func getNextDateString(fromDate: NSDate)->String
+    {
+        if( Date == nil)
+        {
+            return ""
+        }
+        
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        return formatter.stringFromDate(getNextDate(fromDate))
+    }
+    
+    func getLastDateString(fromDate: NSDate)->String
+    {
+        if( Date == nil)
+        {
+            return ""
+        }
+        
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        return formatter.stringFromDate(getLastDate(fromDate))
     }
     
     func getDescription()->String
@@ -72,14 +97,14 @@ class Transaction: NSObject, NSCoding
         
         //Return the number of times from start date to passed-in date
         //if still recurring (no EndDate)
-        if(EndDate == nil)
+        if(EndDate == NSDate.distantFuture())
         {
-            return NSCalendar.currentCalendar().components(.Month, fromDate: date, toDate: Date, options: []).month
+            return 1 + NSCalendar.currentCalendar().components(.Month, fromDate: Date, toDate: date, options: []).month
         }
         
         //Return the number of times from start date to end date if
         //no longer recurring
-        return NSCalendar.currentCalendar().components(.Month, fromDate: EndDate!, toDate: Date, options: []).month
+        return 1 + NSCalendar.currentCalendar().components(.Month, fromDate: Date, toDate: EndDate, options: []).month
     }
     
     //NSCoding implementation
@@ -122,5 +147,35 @@ class Transaction: NSObject, NSCoding
         {
             aCoder.encodeObject(self.EndDate, forKey:"EndDate")
         }
+    }
+    
+    func getLastDate(fromDate: NSDate)->NSDate
+    {
+        if(!Recurring)
+        {
+            return Date
+        }
+        
+        let recurred = getRecurred(fromDate) - 1
+        
+        let dateComponents = NSDateComponents()
+        dateComponents.setValue(recurred, forComponent: NSCalendarUnit.Month)
+        let calendar = NSCalendar.currentCalendar()
+        return calendar.dateByAddingComponents(dateComponents, toDate: Date, options: NSCalendarOptions(rawValue: 0))!
+    }
+    
+    func getNextDate(fromDate: NSDate)->NSDate
+    {
+        if(!Recurring)
+        {
+            return Date
+        }
+        
+        let recurred = getRecurred(fromDate)
+        
+        let dateComponents = NSDateComponents()
+        dateComponents.setValue(recurred, forComponent: NSCalendarUnit.Month)
+        let calendar = NSCalendar.currentCalendar()
+        return calendar.dateByAddingComponents(dateComponents, toDate: Date, options: NSCalendarOptions(rawValue: 0))!
     }
 }
