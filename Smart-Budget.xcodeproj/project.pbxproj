@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D85241AE1C704A42007CE555 /* SummaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85241AD1C704A42007CE555 /* SummaryManager.swift */; };
+		D85E1B501C7D5A610094E8E8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */; };
+		D85E1B531C7D5AEA0094E8E8 /* BudgetCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B511C7D5AEA0094E8E8 /* BudgetCD.xcdatamodeld */; };
+		D85E1B5C1C7D72360094E8E8 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B581C7D72360094E8E8 /* Account+CoreDataProperties.swift */; };
+		D85E1B5D1C7D72360094E8E8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B591C7D72360094E8E8 /* Account.swift */; };
+		D85E1B5E1C7D72360094E8E8 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B5A1C7D72360094E8E8 /* Transaction+CoreDataProperties.swift */; };
+		D85E1B5F1C7D72360094E8E8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B5B1C7D72360094E8E8 /* Transaction.swift */; };
 		D8C7A9941C5F0F0E00B37FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */; };
 		D8C7A9961C5F0F0E00B37FAB /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9951C5F0F0E00B37FAB /* SummaryViewController.swift */; };
 		D8C7A9981C5F0F0E00B37FAB /* AcctViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9971C5F0F0E00B37FAB /* AcctViewController.swift */; };
@@ -15,24 +21,21 @@
 		D8C7A99D1C5F0F0E00B37FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A99C1C5F0F0E00B37FAB /* Assets.xcassets */; };
 		D8C7A9A01C5F0F0E00B37FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A99E1C5F0F0E00B37FAB /* LaunchScreen.storyboard */; };
 		D8C7A9AA1C5F158400B37FAB /* TransViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9A91C5F158400B37FAB /* TransViewController.swift */; };
-		D8C7A9AD1C5F190F00B37FAB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9AC1C5F190F00B37FAB /* Account.swift */; };
-		D8C7A9AF1C5F191D00B37FAB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9AE1C5F191D00B37FAB /* Transaction.swift */; };
 		D8C7A9B11C5F210E00B37FAB /* AccountCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9B01C5F210E00B37FAB /* AccountCache.swift */; };
 		D8C7A9B31C5F211A00B37FAB /* TransactionCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9B21C5F211A00B37FAB /* TransactionCache.swift */; };
 		D8C7A9BE1C5F380400B37FAB /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9BB1C5F380400B37FAB /* circle.png */; };
 		D8C7A9BF1C5F380400B37FAB /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9BC1C5F380400B37FAB /* square.png */; };
 		D8C7A9C01C5F380400B37FAB /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9BD1C5F380400B37FAB /* triangle.png */; };
-		D8C9D97B1C79232300FB9FB5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C9D97A1C79232300FB9FB5 /* libsqlite3.tbd */; };
-		D8C9D9891C79240A00FB9FB5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C9D97F1C79240A00FB9FB5 /* FMDatabase.m */; };
-		D8C9D98A1C79240A00FB9FB5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C9D9811C79240A00FB9FB5 /* FMDatabaseAdditions.m */; };
-		D8C9D98B1C79240A00FB9FB5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C9D9831C79240A00FB9FB5 /* FMDatabasePool.m */; };
-		D8C9D98C1C79240A00FB9FB5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C9D9851C79240A00FB9FB5 /* FMDatabaseQueue.m */; };
-		D8C9D98D1C79240A00FB9FB5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C9D9881C79240A00FB9FB5 /* FMResultSet.m */; };
-		D8C9D98F1C797EF000FB9FB5 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9D98E1C797EF000FB9FB5 /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D85241AD1C704A42007CE555 /* SummaryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryManager.swift; sourceTree = "<group>"; };
+		D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D85E1B521C7D5AEA0094E8E8 /* BudgetCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetCD.xcdatamodel; sourceTree = "<group>"; };
+		D85E1B581C7D72360094E8E8 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D85E1B591C7D72360094E8E8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		D85E1B5A1C7D72360094E8E8 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D85E1B5B1C7D72360094E8E8 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		D8C7A9901C5F0F0E00B37FAB /* Smart-Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart-Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C7A9951C5F0F0E00B37FAB /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
@@ -42,27 +45,11 @@
 		D8C7A99F1C5F0F0E00B37FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8C7A9A11C5F0F0E00B37FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8C7A9A91C5F158400B37FAB /* TransViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransViewController.swift; sourceTree = "<group>"; };
-		D8C7A9AC1C5F190F00B37FAB /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		D8C7A9AE1C5F191D00B37FAB /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		D8C7A9B01C5F210E00B37FAB /* AccountCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCache.swift; sourceTree = "<group>"; };
 		D8C7A9B21C5F211A00B37FAB /* TransactionCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCache.swift; sourceTree = "<group>"; };
 		D8C7A9BB1C5F380400B37FAB /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = Images/circle.png; sourceTree = "<group>"; };
 		D8C7A9BC1C5F380400B37FAB /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square.png; path = Images/square.png; sourceTree = "<group>"; };
 		D8C7A9BD1C5F380400B37FAB /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = triangle.png; path = Images/triangle.png; sourceTree = "<group>"; };
-		D8C9D97A1C79232300FB9FB5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		D8C9D97D1C79240900FB9FB5 /* Smart-Budget-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smart-Budget-Bridging-Header.h"; sourceTree = "<group>"; };
-		D8C9D97E1C79240A00FB9FB5 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		D8C9D97F1C79240A00FB9FB5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		D8C9D9801C79240A00FB9FB5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		D8C9D9811C79240A00FB9FB5 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		D8C9D9821C79240A00FB9FB5 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		D8C9D9831C79240A00FB9FB5 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		D8C9D9841C79240A00FB9FB5 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		D8C9D9851C79240A00FB9FB5 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		D8C9D9861C79240A00FB9FB5 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		D8C9D9871C79240A00FB9FB5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		D8C9D9881C79240A00FB9FB5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		D8C9D98E1C797EF000FB9FB5 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C9D97B1C79232300FB9FB5 /* libsqlite3.tbd in Frameworks */,
+				D85E1B501C7D5A610094E8E8 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +67,7 @@
 		D8C7A9871C5F0F0E00B37FAB = {
 			isa = PBXGroup;
 			children = (
-				D8C9D97A1C79232300FB9FB5 /* libsqlite3.tbd */,
+				D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */,
 				D8C7A9921C5F0F0E00B37FAB /* Smart-Budget */,
 				D8C7A9911C5F0F0E00B37FAB /* Products */,
 			);
@@ -97,7 +84,6 @@
 		D8C7A9921C5F0F0E00B37FAB /* Smart-Budget */ = {
 			isa = PBXGroup;
 			children = (
-				D8C9D97C1C7923CB00FB9FB5 /* FMDB */,
 				D8C7A9B41C5F374C00B37FAB /* Images */,
 				D8C7A9AB1C5F18ED00B37FAB /* Model */,
 				D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */,
@@ -108,6 +94,7 @@
 				D8C7A99E1C5F0F0E00B37FAB /* LaunchScreen.storyboard */,
 				D8C7A9A11C5F0F0E00B37FAB /* Info.plist */,
 				D8C7A9A91C5F158400B37FAB /* TransViewController.swift */,
+				D85E1B511C7D5AEA0094E8E8 /* BudgetCD.xcdatamodeld */,
 			);
 			path = "Smart-Budget";
 			sourceTree = "<group>";
@@ -115,12 +102,13 @@
 		D8C7A9AB1C5F18ED00B37FAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D8C7A9AC1C5F190F00B37FAB /* Account.swift */,
-				D8C7A9AE1C5F191D00B37FAB /* Transaction.swift */,
 				D8C7A9B01C5F210E00B37FAB /* AccountCache.swift */,
 				D8C7A9B21C5F211A00B37FAB /* TransactionCache.swift */,
 				D85241AD1C704A42007CE555 /* SummaryManager.swift */,
-				D8C9D98E1C797EF000FB9FB5 /* DatabaseManager.swift */,
+				D85E1B581C7D72360094E8E8 /* Account+CoreDataProperties.swift */,
+				D85E1B591C7D72360094E8E8 /* Account.swift */,
+				D85E1B5A1C7D72360094E8E8 /* Transaction+CoreDataProperties.swift */,
+				D85E1B5B1C7D72360094E8E8 /* Transaction.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -133,25 +121,6 @@
 				D8C7A9BD1C5F380400B37FAB /* triangle.png */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		D8C9D97C1C7923CB00FB9FB5 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				D8C9D97E1C79240A00FB9FB5 /* FMDatabase.h */,
-				D8C9D97F1C79240A00FB9FB5 /* FMDatabase.m */,
-				D8C9D9801C79240A00FB9FB5 /* FMDatabaseAdditions.h */,
-				D8C9D9811C79240A00FB9FB5 /* FMDatabaseAdditions.m */,
-				D8C9D9821C79240A00FB9FB5 /* FMDatabasePool.h */,
-				D8C9D9831C79240A00FB9FB5 /* FMDatabasePool.m */,
-				D8C9D9841C79240A00FB9FB5 /* FMDatabaseQueue.h */,
-				D8C9D9851C79240A00FB9FB5 /* FMDatabaseQueue.m */,
-				D8C9D9861C79240A00FB9FB5 /* FMDB.h */,
-				D8C9D9871C79240A00FB9FB5 /* FMResultSet.h */,
-				D8C9D9881C79240A00FB9FB5 /* FMResultSet.m */,
-				D8C9D97D1C79240900FB9FB5 /* Smart-Budget-Bridging-Header.h */,
-			);
-			name = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,21 +200,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C7A9AD1C5F190F00B37FAB /* Account.swift in Sources */,
-				D8C9D98B1C79240A00FB9FB5 /* FMDatabasePool.m in Sources */,
-				D8C9D98F1C797EF000FB9FB5 /* DatabaseManager.swift in Sources */,
-				D8C9D98D1C79240A00FB9FB5 /* FMResultSet.m in Sources */,
 				D8C7A9981C5F0F0E00B37FAB /* AcctViewController.swift in Sources */,
-				D8C7A9AF1C5F191D00B37FAB /* Transaction.swift in Sources */,
-				D8C9D98C1C79240A00FB9FB5 /* FMDatabaseQueue.m in Sources */,
-				D8C9D9891C79240A00FB9FB5 /* FMDatabase.m in Sources */,
+				D85E1B5D1C7D72360094E8E8 /* Account.swift in Sources */,
+				D85E1B5E1C7D72360094E8E8 /* Transaction+CoreDataProperties.swift in Sources */,
+				D85E1B5F1C7D72360094E8E8 /* Transaction.swift in Sources */,
 				D8C7A9B31C5F211A00B37FAB /* TransactionCache.swift in Sources */,
 				D8C7A9941C5F0F0E00B37FAB /* AppDelegate.swift in Sources */,
 				D8C7A9B11C5F210E00B37FAB /* AccountCache.swift in Sources */,
-				D8C9D98A1C79240A00FB9FB5 /* FMDatabaseAdditions.m in Sources */,
 				D85241AE1C704A42007CE555 /* SummaryManager.swift in Sources */,
 				D8C7A9AA1C5F158400B37FAB /* TransViewController.swift in Sources */,
+				D85E1B5C1C7D72360094E8E8 /* Account+CoreDataProperties.swift in Sources */,
 				D8C7A9961C5F0F0E00B37FAB /* SummaryViewController.swift in Sources */,
+				D85E1B531C7D5AEA0094E8E8 /* BudgetCD.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +329,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newborngames.Smart-Budget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Smart-Budget/Smart-Budget-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -377,7 +342,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newborngames.Smart-Budget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Smart-Budget/Smart-Budget-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -403,6 +367,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D85E1B511C7D5AEA0094E8E8 /* BudgetCD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D85E1B521C7D5AEA0094E8E8 /* BudgetCD.xcdatamodel */,
+			);
+			currentVersion = D85E1B521C7D5AEA0094E8E8 /* BudgetCD.xcdatamodel */;
+			path = BudgetCD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D8C7A9881C5F0F0E00B37FAB /* Project object */;
 }

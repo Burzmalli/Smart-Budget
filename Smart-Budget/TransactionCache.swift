@@ -7,15 +7,35 @@
 //
 
 import Foundation
+import CoreData
 
-class TransactionCache: NSObject, NSCoding
+class TransactionCache: NSObject
 {
     var Transactions = [Transaction]()
     
     func CreateTransaction(thisTransaction: Transaction)-> Bool
     {
         Transactions.append(thisTransaction);
-        DatabaseManager.InsertTransaction(thisTransaction)
+        let entityDescription = NSEntityDescription.entityForName("Transaction", inManagedObjectContext: SummaryManager.managedObjectContext)
+        let transaction = Transaction(entity: entityDescription!,insertIntoManagedObjectContext: SummaryManager.managedObjectContext)
+        
+        transaction.transId = thisTransaction.transId
+        transaction.date = thisTransaction.date
+        transaction.endDate = thisTransaction.endDate
+        transaction.amount = thisTransaction.amount
+        transaction.name = thisTransaction.name
+        transaction.recurring = thisTransaction.recurring
+        transaction.account = thisTransaction.account
+        
+        do
+        {
+            try SummaryManager.managedObjectContext.save()
+        }
+        catch
+        {
+            
+        }
+        
         return true;
     }
     
@@ -29,42 +49,15 @@ class TransactionCache: NSObject, NSCoding
         var idx = 0;
         for entry in Transactions
         {
-            if(entry.Name! == thisTransaction.Name!
-            && entry.Amount == thisTransaction.Amount
-            && entry.Date == thisTransaction.Date)
+            if(entry.name! == thisTransaction.name!
+            && entry.amount == thisTransaction.amount
+            && entry.date == thisTransaction.date)
             {
                 Transactions.removeAtIndex(idx);
-                DatabaseManager.DeleteTransaction(thisTransaction.Id)
                 break;
             }
             idx++;
         }
         return true;
-    }
-    
-    //NSCoding implementation
-    required convenience init?(coder aDecoder: NSCoder)
-    {
-        self.init()
-        self.Transactions = (aDecoder.decodeObjectForKey("Transactions") as? [Transaction])!
-    }
-    
-    //NSCoding implementation
-    func encodeWithCoder(aCoder: NSCoder)
-    {
-        aCoder.encodeObject(self.Transactions, forKey: "Transactions")
-    }
-    
-    //Loads data from the database rather than archive
-    func loadFromDb()->Bool
-    {
-        Transactions = DatabaseManager.GetAllTransactions()
-        
-        if(Transactions.count < 1)
-        {
-            return false
-        }
-        
-        return true
     }
 }

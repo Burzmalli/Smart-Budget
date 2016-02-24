@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SummaryViewController: UIViewController {
-
+class SummaryViewController: UIViewController
+{
     @IBOutlet weak var summaryDate: UIDatePicker!
     
     @IBOutlet weak var totalBalance: UILabel!
@@ -34,14 +34,6 @@ class SummaryViewController: UIViewController {
         super.viewDidLoad()
         summaryDate.datePickerMode = UIDatePickerMode.Date
         summaryDate.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
-        
-        //DatabaseManager.CreateDatabase(true)
-        
-        //Open database connection
-        DatabaseManager.ConnectToDatabase()
-        
-        //Load data from the database
-        SummaryManager.LoadBudgetFromDb()
         
         //Set the initial state of the summary fields
         UpdateSummaryFields()
@@ -73,31 +65,31 @@ class SummaryViewController: UIViewController {
     {
         SetLabelTextFromDollarValue(totalBalance, amt: SummaryManager.Balance)
         
-        if(SummaryManager.PreviousTrans.Acct == nil)
+        if(SummaryManager.PreviousTrans.account == nil)
         {
             lastAccount.text = ""
         }
         else
         {
-            lastAccount.text = SummaryManager.PreviousTrans.Acct.Name
+            lastAccount.text = SummaryManager.PreviousTrans.account!.name
         }
-        lastName.text = SummaryManager.PreviousTrans.Name
+        lastName.text = SummaryManager.PreviousTrans.name
         
-        SetLabelTextFromDollarValue(lastValue, amt: SummaryManager.PreviousTrans.Amount)
+        SetLabelTextFromDollarValue(lastValue, amt: SummaryManager.PreviousTrans.amount as! Double)
         
         lastDate.text = SummaryManager.PreviousTrans.getLastDateString(summaryDate.date)
         
-        if(SummaryManager.NextTrans.Acct == nil)
+        if(SummaryManager.NextTrans.account == nil)
         {
             nextAccount.text = ""
         }
         else
         {
-            nextAccount.text = SummaryManager.NextTrans.Acct.Name
+            nextAccount.text = SummaryManager.NextTrans.account!.name
         }
-        nextName.text = SummaryManager.NextTrans.Name
+        nextName.text = SummaryManager.NextTrans.name
         
-        SetLabelTextFromDollarValue(nextValue, amt: SummaryManager.NextTrans.Amount)
+        SetLabelTextFromDollarValue(nextValue, amt: SummaryManager.NextTrans.amount as! Double)
         
         nextDate.text = SummaryManager.NextTrans.getNextDateString(summaryDate.date)
     }

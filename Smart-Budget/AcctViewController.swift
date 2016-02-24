@@ -19,8 +19,8 @@ class AcctViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func addAccount(sender: AnyObject)
     {
         let anAccount = Account();
-        anAccount.Name = acctName.text;
-        anAccount.Balance = Double(acctBalance.text!);
+        anAccount.name = acctName.text;
+        anAccount.startingBalance = Double(acctBalance.text!);
         SummaryManager.acctCache.CreateAccount(anAccount)
         accountList.reloadData()
     }
@@ -28,8 +28,8 @@ class AcctViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func deleteAccount(sender: AnyObject)
     {
         let anAccount = Account();
-        anAccount.Name = acctName.text;
-        anAccount.Balance = Double(acctBalance.text!)
+        anAccount.name = acctName.text;
+        anAccount.startingBalance = Double(acctBalance.text!)
         SummaryManager.acctCache.DeleteAccount(anAccount)
         accountList.reloadData()
     }

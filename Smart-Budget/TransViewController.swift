@@ -27,11 +27,11 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func addTransaction(sender: AnyObject)
     {
         let aTransaction = Transaction()
-        aTransaction.Name = transName.text
-        aTransaction.Amount = Double(transAmount.text!)
-        aTransaction.Date = transDate.date
-        aTransaction.Acct = selectedAccount
-        aTransaction.Recurring = recurringSwitch.on
+        aTransaction.name = transName.text
+        aTransaction.amount = Double(transAmount.text!)
+        aTransaction.date = transDate.date
+        aTransaction.account = selectedAccount
+        aTransaction.recurring = recurringSwitch.on
         SummaryManager.transCache.CreateTransaction(aTransaction)
         transactionList.reloadData()
     }
@@ -39,10 +39,10 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func deleteTransaction(sender: AnyObject)
     {
         let aTransaction = Transaction()
-        aTransaction.Name = transName.text
-        aTransaction.Amount = Double(transAmount.text!)
-        aTransaction.Date = transDate.date
-        aTransaction.Acct = selectedAccount
+        aTransaction.name = transName.text
+        aTransaction.amount = Double(transAmount.text!)
+        aTransaction.date = transDate.date
+        aTransaction.account = selectedAccount
         SummaryManager.transCache.DeleteTransaction(aTransaction)
         transactionList.reloadData()
     }
@@ -73,7 +73,7 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //UIPickerViewDelegate implementation
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return SummaryManager.acctCache.RetrieveAllAccounts()[row].Name
+        return SummaryManager.acctCache.RetrieveAllAccounts()[row].name
     }
     
     //UIPickerViewDelegate implementation

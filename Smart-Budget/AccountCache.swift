@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import CoreData
 
-class AccountCache: NSObject, NSCoding
+class AccountCache: NSObject
 {
     var Accounts = [Account]()
     
@@ -18,7 +19,24 @@ class AccountCache: NSObject, NSCoding
         if(IsAcctUnique(thisAccount))
         {
             Accounts.append(thisAccount);
-            DatabaseManager.InsertAccount(thisAccount)
+            let entityDescription = NSEntityDescription.entityForName("Account", inManagedObjectContext: SummaryManager.managedObjectContext)
+            
+            let account = Account(entity: entityDescription!,insertIntoManagedObjectContext: SummaryManager.managedObjectContext)
+            
+            account.accountId = thisAccount.accountId
+            account.name = thisAccount.name
+            account.startingBalance = thisAccount.startingBalance
+            account.active = thisAccount.active
+            
+            do
+            {
+                try SummaryManager.managedObjectContext.save()
+            }
+            catch
+            {
+                
+            }
+            
             return true;
         }
         
@@ -35,11 +53,10 @@ class AccountCache: NSObject, NSCoding
         var idx = 0;
         for entry in Accounts
         {
-            if(entry.Name! == thisAccount.Name!)
+            if(entry.name! == thisAccount.name!)
             {
                 Accounts.removeAtIndex(idx);
-                DatabaseManager.DeactivateAccount(thisAccount.Id)
-                thisAccount.Active = false
+                thisAccount.active = false
                 break;
             }
             idx++;
@@ -52,37 +69,12 @@ class AccountCache: NSObject, NSCoding
     {
         for acct in Accounts
         {
-            if( thisAccount.Name! == acct.Name!)
+            if( thisAccount.name! == acct.name!)
             {
                 return false;
             }
         }
         
         return true;
-    }
-    
-    //NSCoding implementation
-    required convenience init?(coder aDecoder: NSCoder)
-    {
-        self.init()
-        self.Accounts = (aDecoder.decodeObjectForKey("Accounts") as? [Account])!
-    }
-    
-    //NSCoding implementation
-    func encodeWithCoder(aCoder: NSCoder)
-    {
-        aCoder.encodeObject(self.Accounts, forKey: "Accounts")
-    }
-    
-    func loadFromDb()->Bool
-    {
-        Accounts = DatabaseManager.GetAllAccounts()
-        
-        if(Accounts.count < 1)
-        {
-            return false
-        }
-        
-        return true
     }
 }
