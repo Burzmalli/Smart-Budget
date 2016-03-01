@@ -19,7 +19,7 @@ class AccountCache: NSObject
         if(IsAcctUnique(thisAccount))
         {
             Accounts.append(thisAccount);
-            let entityDescription = NSEntityDescription.entityForName("Account", inManagedObjectContext: SummaryManager.managedObjectContext)
+            let entityDescription = NSEntityDescription.entityForName("Account", inManagedObjectContext: SummaryManager.GetContext())
             
             let account = Account(entity: entityDescription!,insertIntoManagedObjectContext: SummaryManager.managedObjectContext)
             
@@ -30,7 +30,7 @@ class AccountCache: NSObject
             
             do
             {
-                try SummaryManager.managedObjectContext.save()
+                try SummaryManager.GetContext().save()
             }
             catch
             {

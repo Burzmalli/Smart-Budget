@@ -16,7 +16,7 @@ class TransactionCache: NSObject
     func CreateTransaction(thisTransaction: Transaction)-> Bool
     {
         Transactions.append(thisTransaction);
-        let entityDescription = NSEntityDescription.entityForName("Transaction", inManagedObjectContext: SummaryManager.managedObjectContext)
+        let entityDescription = NSEntityDescription.entityForName("Transaction", inManagedObjectContext: SummaryManager.GetContext())
         let transaction = Transaction(entity: entityDescription!,insertIntoManagedObjectContext: SummaryManager.managedObjectContext)
         
         transaction.transId = thisTransaction.transId
@@ -29,7 +29,7 @@ class TransactionCache: NSObject
         
         do
         {
-            try SummaryManager.managedObjectContext.save()
+            try SummaryManager.GetContext().save()
         }
         catch
         {

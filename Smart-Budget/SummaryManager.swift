@@ -8,10 +8,12 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class SummaryManager
 {
-    static let managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+    static var managedObjectContext: NSManagedObjectContext?
+    
     static var acctCache = AccountCache()
     static var transCache = TransactionCache()
     
@@ -22,6 +24,16 @@ class SummaryManager
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
     static let AcctURL = DocumentsDirectory.URLByAppendingPathComponent("accounts")
     static let TransURL = DocumentsDirectory.URLByAppendingPathComponent("transactions")
+    
+    static func GetContext()->NSManagedObjectContext
+    {
+        if(managedObjectContext == nil)
+        {
+            managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        }
+        
+        return managedObjectContext!
+    }
     
     //Updates the summary information based on the existing accounts and
     //transactions, projected out to the date that was passed in

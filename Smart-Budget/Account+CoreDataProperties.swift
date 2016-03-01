@@ -14,10 +14,8 @@ import CoreData
 
 extension Account
 {
-
     @NSManaged var accountId: NSNumber?
     @NSManaged var name: String?
     @NSManaged var startingBalance: NSNumber?
     @NSManaged var active: NSNumber?
-
 }

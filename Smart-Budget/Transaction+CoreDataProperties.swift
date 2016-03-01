@@ -14,7 +14,6 @@ import CoreData
 
 extension Transaction
 {
-
     @NSManaged var transId: NSNumber?
     @NSManaged var name: String?
     @NSManaged var amount: NSNumber?
@@ -22,5 +21,4 @@ extension Transaction
     @NSManaged var date: NSDate?
     @NSManaged var endDate: NSDate?
     @NSManaged var account: Account?
-
 }
