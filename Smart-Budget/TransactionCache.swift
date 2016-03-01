@@ -16,16 +16,6 @@ class TransactionCache: NSObject
     func CreateTransaction(thisTransaction: Transaction)-> Bool
     {
         Transactions.append(thisTransaction);
-        let entityDescription = NSEntityDescription.entityForName("Transaction", inManagedObjectContext: SummaryManager.GetContext())
-        let transaction = Transaction(entity: entityDescription!,insertIntoManagedObjectContext: SummaryManager.managedObjectContext)
-        
-        transaction.transId = thisTransaction.transId
-        transaction.date = thisTransaction.date
-        transaction.endDate = thisTransaction.endDate
-        transaction.amount = thisTransaction.amount
-        transaction.name = thisTransaction.name
-        transaction.recurring = thisTransaction.recurring
-        transaction.account = thisTransaction.account
         
         do
         {

@@ -18,4 +18,5 @@ extension Account
     @NSManaged var name: String?
     @NSManaged var startingBalance: NSNumber?
     @NSManaged var active: NSNumber?
+    @NSManaged var transactions: [Transaction]?
 }

@@ -26,7 +26,7 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBAction func addTransaction(sender: AnyObject)
     {
-        let aTransaction = Transaction()
+        let aTransaction = SummaryManager.GetTransaction()
         aTransaction.name = transName.text
         aTransaction.amount = Double(transAmount.text!)
         aTransaction.date = transDate.date
@@ -38,7 +38,7 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBAction func deleteTransaction(sender: AnyObject)
     {
-        let aTransaction = Transaction()
+        let aTransaction = SummaryManager.GetTransaction()
         aTransaction.name = transName.text
         aTransaction.amount = Double(transAmount.text!)
         aTransaction.date = transDate.date

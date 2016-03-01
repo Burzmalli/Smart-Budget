@@ -19,14 +19,6 @@ class AccountCache: NSObject
         if(IsAcctUnique(thisAccount))
         {
             Accounts.append(thisAccount);
-            let entityDescription = NSEntityDescription.entityForName("Account", inManagedObjectContext: SummaryManager.GetContext())
-            
-            let account = Account(entity: entityDescription!,insertIntoManagedObjectContext: SummaryManager.managedObjectContext)
-            
-            account.accountId = thisAccount.accountId
-            account.name = thisAccount.name
-            account.startingBalance = thisAccount.startingBalance
-            account.active = thisAccount.active
             
             do
             {

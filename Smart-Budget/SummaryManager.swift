@@ -82,4 +82,21 @@ class SummaryManager
         }
     }
     
+    static func GetAccount()->Account
+    {
+        let entityDescription = NSEntityDescription.entityForName("Account", inManagedObjectContext: GetContext())
+        
+        let anAccount = Account(entity: entityDescription!, insertIntoManagedObjectContext: GetContext())
+        
+        return anAccount
+    }
+    
+    static func GetTransaction()->Transaction
+    {
+        let entityDescription = NSEntityDescription.entityForName("Transaction", inManagedObjectContext: GetContext())
+        
+        let aTransaction = Transaction(entity: entityDescription!, insertIntoManagedObjectContext: GetContext())
+        
+        return aTransaction
+    }
 }
