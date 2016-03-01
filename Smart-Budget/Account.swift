@@ -14,6 +14,6 @@ class Account: NSManagedObject
 {
     func getDescription() -> String
     {
-        return name! + "::$" + String(format: "%.2f", startingBalance!)
+        return name! + "::$" + String(format: "%.2f", startingBalance!.doubleValue)
     }
 }

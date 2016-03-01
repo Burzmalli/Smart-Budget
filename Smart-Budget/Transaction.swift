@@ -52,7 +52,7 @@ class Transaction: NSManagedObject
     
     func getDescription()->String
     {
-        let amt = String(format: "%.2f", amount!)
+        let amt = String(format: "%.2f", amount!.doubleValue)
         let date = getDateString()
         
         if(account == nil)
@@ -66,10 +66,10 @@ class Transaction: NSManagedObject
     //Returns the number of times that a transaction has recurred
     //from the start date to the date that is passed in.
     //Returns 1 if transaction is non-recurring
-    func getRecurred(date: NSDate)->Int
+    func getRecurred(toDate: NSDate)->Int
     {
         //Return 0 if transaction date is alter than passed-in date
-        if(self.date!.compare(date) == NSComparisonResult.OrderedDescending)
+        if(self.date!.compare(toDate) == NSComparisonResult.OrderedDescending)
         {
             return 0
         }
@@ -84,12 +84,12 @@ class Transaction: NSManagedObject
         //if still recurring (no EndDate)
         if(endDate == NSDate.distantFuture())
         {
-            return 1 + NSCalendar.currentCalendar().components(.Month, fromDate: date, toDate: date, options: []).month
+            return 1 + NSCalendar.currentCalendar().components(.Month, fromDate: date!, toDate: toDate, options: []).month
         }
         
         //Return the number of times from start date to end date if
         //no longer recurring
-        return 1 + NSCalendar.currentCalendar().components(.Month, fromDate: date, toDate: endDate!, options: []).month
+        return 1 + NSCalendar.currentCalendar().components(.Month, fromDate: date!, toDate: endDate!, options: []).month
     }
     
     func getLastDate(fromDate: NSDate)->NSDate

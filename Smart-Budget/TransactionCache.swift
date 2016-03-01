@@ -44,6 +44,15 @@ class TransactionCache: NSObject
             && entry.date == thisTransaction.date)
             {
                 Transactions.removeAtIndex(idx);
+                do
+                {
+                    SummaryManager.GetContext().deleteObject(entry)
+                    try SummaryManager.GetContext().save()
+                }
+                catch
+                {
+                    return false
+                }
                 break;
             }
             idx++;

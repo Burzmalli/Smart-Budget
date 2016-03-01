@@ -12,19 +12,20 @@ import UIKit
 
 class SummaryManager
 {
-    static var managedObjectContext: NSManagedObjectContext?
+    static private var managedObjectContext: NSManagedObjectContext?
     
     static var acctCache = AccountCache()
     static var transCache = TransactionCache()
     
     static var Balance = 0.0;
-    static var PreviousTrans = Transaction()
-    static var NextTrans = Transaction()
+    static var PreviousTrans: Transaction?
+    static var NextTrans: Transaction?
     
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
     static let AcctURL = DocumentsDirectory.URLByAppendingPathComponent("accounts")
     static let TransURL = DocumentsDirectory.URLByAppendingPathComponent("transactions")
     
+    //Instantiates the managedObjectContext, if nil, and then returns it
     static func GetContext()->NSManagedObjectContext
     {
         if(managedObjectContext == nil)
@@ -33,6 +34,36 @@ class SummaryManager
         }
         
         return managedObjectContext!
+    }
+    
+    //Loads any existing accounts and transactions from core data
+    static func FetchData()->Bool
+    {
+        var fetchRequest = NSFetchRequest(entityName: "Account")
+        
+        do
+        {
+            let results = try GetContext().executeFetchRequest(fetchRequest)
+            acctCache.Accounts = results as! [Account]
+        }
+        catch
+        {
+            return false
+        }
+        
+        fetchRequest = NSFetchRequest(entityName: "Transaction")
+        
+        do
+        {
+            let results = try GetContext().executeFetchRequest(fetchRequest)
+            transCache.Transactions = results as! [Transaction]
+        }
+        catch
+        {
+            return false
+        }
+        
+        return true
     }
     
     //Updates the summary information based on the existing accounts and
@@ -65,23 +96,23 @@ class SummaryManager
                 Balance += (trans.amount as! Double) * Double(recurred);
                 
                 //Ensure the most recent transaction is set
-                if(PreviousTrans.date == nil
-                    || trans.getLastDate(date).compare(PreviousTrans.getLastDate(date)) == NSComparisonResult.OrderedDescending)
+                if(PreviousTrans == nil || PreviousTrans!.date == nil
+                    || trans.getLastDate(date).compare(PreviousTrans!.getLastDate(date)) == NSComparisonResult.OrderedDescending)
                 {
                     PreviousTrans = trans
                 }
             }
-            else //Logic to set the next transaction variable
+
+            if(NextTrans == nil || NextTrans!.date == nil
+                || trans.getNextDate(date).compare(NextTrans!.getNextDate(date)) == NSComparisonResult.OrderedAscending)
             {
-                if(NextTrans.date == nil
-                    || trans.getNextDate(date).compare(NextTrans.getNextDate(date)) == NSComparisonResult.OrderedAscending)
-                {
-                    NextTrans = trans
-                }
+                NextTrans = trans
             }
+
         }
     }
     
+    //Creates and returns a new account as part of the managedObjectContext
     static func GetAccount()->Account
     {
         let entityDescription = NSEntityDescription.entityForName("Account", inManagedObjectContext: GetContext())
@@ -91,6 +122,7 @@ class SummaryManager
         return anAccount
     }
     
+    //Creates and returns a new transaction as part of the managedObjectContext
     static func GetTransaction()->Transaction
     {
         let entityDescription = NSEntityDescription.entityForName("Transaction", inManagedObjectContext: GetContext())

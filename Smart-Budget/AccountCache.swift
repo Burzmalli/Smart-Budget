@@ -31,6 +31,10 @@ class AccountCache: NSObject
             
             return true;
         }
+        else
+        {
+            SummaryManager.GetContext().deleteObject(thisAccount)
+        }
         
         return false;
     }
@@ -49,6 +53,14 @@ class AccountCache: NSObject
             {
                 Accounts.removeAtIndex(idx);
                 thisAccount.active = false
+                do
+                {
+                    try SummaryManager.GetContext().save()
+                }
+                catch
+                {
+                    return false
+                }
                 break;
             }
             idx++;

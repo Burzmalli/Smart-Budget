@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		D85241AE1C704A42007CE555 /* SummaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85241AD1C704A42007CE555 /* SummaryManager.swift */; };
 		D85E1B501C7D5A610094E8E8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */; };
-		D85E1B531C7D5AEA0094E8E8 /* BudgetCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B511C7D5AEA0094E8E8 /* BudgetCD.xcdatamodeld */; };
-		D85E1B5C1C7D72360094E8E8 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B581C7D72360094E8E8 /* Account+CoreDataProperties.swift */; };
 		D85E1B5D1C7D72360094E8E8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B591C7D72360094E8E8 /* Account.swift */; };
-		D85E1B5E1C7D72360094E8E8 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B5A1C7D72360094E8E8 /* Transaction+CoreDataProperties.swift */; };
 		D85E1B5F1C7D72360094E8E8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B5B1C7D72360094E8E8 /* Transaction.swift */; };
+		D85E1B621C8557EA0094E8E8 /* BudgetCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B601C8557EA0094E8E8 /* BudgetCD.xcdatamodeld */; };
+		D85E1B651C8559320094E8E8 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B631C8559320094E8E8 /* Account+CoreDataProperties.swift */; };
+		D85E1B661C8559320094E8E8 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B641C8559320094E8E8 /* Transaction+CoreDataProperties.swift */; };
 		D8C7A9941C5F0F0E00B37FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */; };
 		D8C7A9961C5F0F0E00B37FAB /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9951C5F0F0E00B37FAB /* SummaryViewController.swift */; };
 		D8C7A9981C5F0F0E00B37FAB /* AcctViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9971C5F0F0E00B37FAB /* AcctViewController.swift */; };
@@ -31,11 +31,11 @@
 /* Begin PBXFileReference section */
 		D85241AD1C704A42007CE555 /* SummaryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryManager.swift; sourceTree = "<group>"; };
 		D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D85E1B521C7D5AEA0094E8E8 /* BudgetCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetCD.xcdatamodel; sourceTree = "<group>"; };
-		D85E1B581C7D72360094E8E8 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D85E1B591C7D72360094E8E8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		D85E1B5A1C7D72360094E8E8 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D85E1B5B1C7D72360094E8E8 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		D85E1B611C8557EA0094E8E8 /* BudgetCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetCD.xcdatamodel; sourceTree = "<group>"; };
+		D85E1B631C8559320094E8E8 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D85E1B641C8559320094E8E8 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D8C7A9901C5F0F0E00B37FAB /* Smart-Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart-Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C7A9951C5F0F0E00B37FAB /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +84,7 @@
 		D8C7A9921C5F0F0E00B37FAB /* Smart-Budget */ = {
 			isa = PBXGroup;
 			children = (
+				D85E1B601C8557EA0094E8E8 /* BudgetCD.xcdatamodeld */,
 				D8C7A9B41C5F374C00B37FAB /* Images */,
 				D8C7A9AB1C5F18ED00B37FAB /* Model */,
 				D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */,
@@ -94,7 +95,6 @@
 				D8C7A99E1C5F0F0E00B37FAB /* LaunchScreen.storyboard */,
 				D8C7A9A11C5F0F0E00B37FAB /* Info.plist */,
 				D8C7A9A91C5F158400B37FAB /* TransViewController.swift */,
-				D85E1B511C7D5AEA0094E8E8 /* BudgetCD.xcdatamodeld */,
 			);
 			path = "Smart-Budget";
 			sourceTree = "<group>";
@@ -105,10 +105,10 @@
 				D8C7A9B01C5F210E00B37FAB /* AccountCache.swift */,
 				D8C7A9B21C5F211A00B37FAB /* TransactionCache.swift */,
 				D85241AD1C704A42007CE555 /* SummaryManager.swift */,
-				D85E1B581C7D72360094E8E8 /* Account+CoreDataProperties.swift */,
 				D85E1B591C7D72360094E8E8 /* Account.swift */,
-				D85E1B5A1C7D72360094E8E8 /* Transaction+CoreDataProperties.swift */,
 				D85E1B5B1C7D72360094E8E8 /* Transaction.swift */,
+				D85E1B631C8559320094E8E8 /* Account+CoreDataProperties.swift */,
+				D85E1B641C8559320094E8E8 /* Transaction+CoreDataProperties.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -201,17 +201,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C7A9981C5F0F0E00B37FAB /* AcctViewController.swift in Sources */,
+				D85E1B651C8559320094E8E8 /* Account+CoreDataProperties.swift in Sources */,
 				D85E1B5D1C7D72360094E8E8 /* Account.swift in Sources */,
-				D85E1B5E1C7D72360094E8E8 /* Transaction+CoreDataProperties.swift in Sources */,
 				D85E1B5F1C7D72360094E8E8 /* Transaction.swift in Sources */,
 				D8C7A9B31C5F211A00B37FAB /* TransactionCache.swift in Sources */,
 				D8C7A9941C5F0F0E00B37FAB /* AppDelegate.swift in Sources */,
 				D8C7A9B11C5F210E00B37FAB /* AccountCache.swift in Sources */,
 				D85241AE1C704A42007CE555 /* SummaryManager.swift in Sources */,
+				D85E1B661C8559320094E8E8 /* Transaction+CoreDataProperties.swift in Sources */,
+				D85E1B621C8557EA0094E8E8 /* BudgetCD.xcdatamodeld in Sources */,
 				D8C7A9AA1C5F158400B37FAB /* TransViewController.swift in Sources */,
-				D85E1B5C1C7D72360094E8E8 /* Account+CoreDataProperties.swift in Sources */,
 				D8C7A9961C5F0F0E00B37FAB /* SummaryViewController.swift in Sources */,
-				D85E1B531C7D5AEA0094E8E8 /* BudgetCD.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,13 +369,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D85E1B511C7D5AEA0094E8E8 /* BudgetCD.xcdatamodeld */ = {
+		D85E1B601C8557EA0094E8E8 /* BudgetCD.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D85E1B521C7D5AEA0094E8E8 /* BudgetCD.xcdatamodel */,
+				D85E1B611C8557EA0094E8E8 /* BudgetCD.xcdatamodel */,
 			);
-			currentVersion = D85E1B521C7D5AEA0094E8E8 /* BudgetCD.xcdatamodel */;
-			path = BudgetCD.xcdatamodeld;
+			currentVersion = D85E1B611C8557EA0094E8E8 /* BudgetCD.xcdatamodel */;
+			name = BudgetCD.xcdatamodeld;
+			path = ../BudgetCD.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

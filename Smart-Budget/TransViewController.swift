@@ -28,10 +28,11 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
     {
         let aTransaction = SummaryManager.GetTransaction()
         aTransaction.name = transName.text
-        aTransaction.amount = Double(transAmount.text!)
+        aTransaction.amount = NSNumber(double: Double(transAmount.text!)!)
         aTransaction.date = transDate.date
         aTransaction.account = selectedAccount
-        aTransaction.recurring = recurringSwitch.on
+        aTransaction.recurring = NSNumber(bool:recurringSwitch.on)
+        aTransaction.endDate = NSDate.distantFuture()
         SummaryManager.transCache.CreateTransaction(aTransaction)
         transactionList.reloadData()
     }
@@ -40,9 +41,10 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
     {
         let aTransaction = SummaryManager.GetTransaction()
         aTransaction.name = transName.text
-        aTransaction.amount = Double(transAmount.text!)
+        aTransaction.amount = NSNumber(double: Double(transAmount.text!)!)
         aTransaction.date = transDate.date
         aTransaction.account = selectedAccount
+        aTransaction.recurring = NSNumber(bool:recurringSwitch.on)
         SummaryManager.transCache.DeleteTransaction(aTransaction)
         transactionList.reloadData()
     }
