@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8520F971C8B49C4003665FE /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8520F961C8B49C4003665FE /* SettingsManager.swift */; };
 		D85241AE1C704A42007CE555 /* SummaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85241AD1C704A42007CE555 /* SummaryManager.swift */; };
 		D85E1B501C7D5A610094E8E8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */; };
 		D85E1B5D1C7D72360094E8E8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B591C7D72360094E8E8 /* Account.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D8520F961C8B49C4003665FE /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		D85241AD1C704A42007CE555 /* SummaryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryManager.swift; sourceTree = "<group>"; };
 		D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D85E1B591C7D72360094E8E8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				D8A17ACA1C87EB7000B0908D /* Account+CoreDataProperties.swift */,
 				D8A17ACB1C87EB7000B0908D /* Transaction+CoreDataProperties.swift */,
 				D8A17ACC1C87EB7000B0908D /* Settings+CoreDataProperties.swift */,
+				D8520F961C8B49C4003665FE /* SettingsManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				D8A17ACF1C87EB7000B0908D /* Settings+CoreDataProperties.swift in Sources */,
 				D8A17AC81C87EB3900B0908D /* Settings.swift in Sources */,
 				D85E1B621C8557EA0094E8E8 /* BudgetCD.xcdatamodeld in Sources */,
+				D8520F971C8B49C4003665FE /* SettingsManager.swift in Sources */,
 				D8C7A9AA1C5F158400B37FAB /* TransViewController.swift in Sources */,
 				D8C7A9961C5F0F0E00B37FAB /* SummaryViewController.swift in Sources */,
 				D8A17ACE1C87EB7000B0908D /* Transaction+CoreDataProperties.swift in Sources */,

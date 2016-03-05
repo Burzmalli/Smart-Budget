@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Settings: NSManagedObject
+public class Settings: NSManagedObject
 {
 
 

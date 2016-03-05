@@ -21,6 +21,8 @@ class InitialViewController: UIViewController {
     
     @IBOutlet weak var passwordStack: UIStackView!
     
+    private var newlyLaunched = true
+    
     @IBAction func switched()
     {
         if(authenticate.on)
@@ -47,7 +49,9 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(SummaryManager.FetchData())
+        newlyLaunched = !SummaryManager.FetchData()
+        
+        if(!newlyLaunched)
         {
             authenticateUser()
         }
@@ -64,13 +68,21 @@ class InitialViewController: UIViewController {
         mainView = UIStoryboard(name: "Main", bundle: nil)
         let viewController = mainView.instantiateInitialViewController()! as UIViewController
         //UIApplication.sharedApplication().windows[0].rootViewController = viewController
+        self.presentViewController(viewController, animated: true, completion: nil)
     }
     
     func evalAuthenticateSuccess(success: Bool, error: NSError?)
     {
         if(success)
         {
-            transitionToMainScreen()
+            if(newlyLaunched)
+            {
+                
+            }
+            else
+            {
+                transitionToMainScreen()
+            }
         }
     }
     
@@ -82,7 +94,16 @@ class InitialViewController: UIViewController {
 
     func authenticateUser()
     {
-        let reason = "Authentication is required to access your budget"
+        var reason = ""
+        
+        if( !newlyLaunched )
+        {
+            reason = "Authentication is required to access your budget"
+        }
+        else
+        {
+            reason = "Use Touch ID to enable it for your budget"
+        }
         
         if(canTouch())
         {
@@ -90,7 +111,10 @@ class InitialViewController: UIViewController {
         }
         else
         {
-            
+            if(newlyLaunched)
+            {
+                
+            }
         }
     }
     

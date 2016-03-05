@@ -46,7 +46,24 @@ class SummaryManager
             return true;
         }
         
-        var fetchRequest = NSFetchRequest(entityName: "Account")
+        var fetchRequest = NSFetchRequest(entityName: "Settings")
+        
+        do
+        {
+            let results = try GetContext().executeFetchRequest(fetchRequest)
+            SettingsManager.CreateSettings(results[0] as! Settings)
+        }
+        catch
+        {
+            return false
+        }
+        
+        if(SettingsManager.MySettings == nil || SettingsManager.MySettings!.username == nil || SettingsManager.MySettings!.username!.isEmpty)
+        {
+            return false;
+        }
+        
+        fetchRequest = NSFetchRequest(entityName: "Account")
         
         do
         {
