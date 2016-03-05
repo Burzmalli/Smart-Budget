@@ -12,12 +12,17 @@
 		D85E1B5D1C7D72360094E8E8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B591C7D72360094E8E8 /* Account.swift */; };
 		D85E1B5F1C7D72360094E8E8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B5B1C7D72360094E8E8 /* Transaction.swift */; };
 		D85E1B621C8557EA0094E8E8 /* BudgetCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B601C8557EA0094E8E8 /* BudgetCD.xcdatamodeld */; };
-		D85E1B651C8559320094E8E8 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B631C8559320094E8E8 /* Account+CoreDataProperties.swift */; };
-		D85E1B661C8559320094E8E8 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B641C8559320094E8E8 /* Transaction+CoreDataProperties.swift */; };
+		D8A17AC81C87EB3900B0908D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17AC41C87EB3900B0908D /* Settings.swift */; };
+		D8A17ACD1C87EB7000B0908D /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17ACA1C87EB7000B0908D /* Account+CoreDataProperties.swift */; };
+		D8A17ACE1C87EB7000B0908D /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17ACB1C87EB7000B0908D /* Transaction+CoreDataProperties.swift */; };
+		D8A17ACF1C87EB7000B0908D /* Settings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17ACC1C87EB7000B0908D /* Settings+CoreDataProperties.swift */; };
+		D8A17AD11C8A10A600B0908D /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A17AD01C8A10A600B0908D /* LocalAuthentication.framework */; };
+		D8A17AD31C8A115800B0908D /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A17AD21C8A115800B0908D /* Initial.storyboard */; };
+		D8A17AD51C8A120C00B0908D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17AD41C8A120C00B0908D /* InitialViewController.swift */; };
 		D8C7A9941C5F0F0E00B37FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */; };
 		D8C7A9961C5F0F0E00B37FAB /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9951C5F0F0E00B37FAB /* SummaryViewController.swift */; };
 		D8C7A9981C5F0F0E00B37FAB /* AcctViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9971C5F0F0E00B37FAB /* AcctViewController.swift */; };
-		D8C7A99B1C5F0F0E00B37FAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9991C5F0F0E00B37FAB /* Main.storyboard */; };
+		D8C7A99B1C5F0F0E00B37FAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9991C5F0F0E00B37FAB /* Main.storyboard */; settings = {ASSET_TAGS = (mainScreen, ); }; };
 		D8C7A99D1C5F0F0E00B37FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A99C1C5F0F0E00B37FAB /* Assets.xcassets */; };
 		D8C7A9A01C5F0F0E00B37FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A99E1C5F0F0E00B37FAB /* LaunchScreen.storyboard */; };
 		D8C7A9AA1C5F158400B37FAB /* TransViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9A91C5F158400B37FAB /* TransViewController.swift */; };
@@ -34,8 +39,13 @@
 		D85E1B591C7D72360094E8E8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		D85E1B5B1C7D72360094E8E8 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		D85E1B611C8557EA0094E8E8 /* BudgetCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetCD.xcdatamodel; sourceTree = "<group>"; };
-		D85E1B631C8559320094E8E8 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D85E1B641C8559320094E8E8 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D8A17AC41C87EB3900B0908D /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		D8A17ACA1C87EB7000B0908D /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D8A17ACB1C87EB7000B0908D /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D8A17ACC1C87EB7000B0908D /* Settings+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D8A17AD01C8A10A600B0908D /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		D8A17AD21C8A115800B0908D /* Initial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Initial.storyboard; sourceTree = "<group>"; };
+		D8A17AD41C8A120C00B0908D /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialViewController.swift; path = ../InitialViewController.swift; sourceTree = "<group>"; };
 		D8C7A9901C5F0F0E00B37FAB /* Smart-Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart-Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C7A9931C5F0F0E00B37FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C7A9951C5F0F0E00B37FAB /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A17AD11C8A10A600B0908D /* LocalAuthentication.framework in Frameworks */,
 				D85E1B501C7D5A610094E8E8 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +78,7 @@
 		D8C7A9871C5F0F0E00B37FAB = {
 			isa = PBXGroup;
 			children = (
+				D8A17AD01C8A10A600B0908D /* LocalAuthentication.framework */,
 				D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */,
 				D8C7A9921C5F0F0E00B37FAB /* Smart-Budget */,
 				D8C7A9911C5F0F0E00B37FAB /* Products */,
@@ -95,6 +107,8 @@
 				D8C7A99E1C5F0F0E00B37FAB /* LaunchScreen.storyboard */,
 				D8C7A9A11C5F0F0E00B37FAB /* Info.plist */,
 				D8C7A9A91C5F158400B37FAB /* TransViewController.swift */,
+				D8A17AD21C8A115800B0908D /* Initial.storyboard */,
+				D8A17AD41C8A120C00B0908D /* InitialViewController.swift */,
 			);
 			path = "Smart-Budget";
 			sourceTree = "<group>";
@@ -102,13 +116,15 @@
 		D8C7A9AB1C5F18ED00B37FAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D8A17AC41C87EB3900B0908D /* Settings.swift */,
 				D8C7A9B01C5F210E00B37FAB /* AccountCache.swift */,
 				D8C7A9B21C5F211A00B37FAB /* TransactionCache.swift */,
 				D85241AD1C704A42007CE555 /* SummaryManager.swift */,
 				D85E1B591C7D72360094E8E8 /* Account.swift */,
 				D85E1B5B1C7D72360094E8E8 /* Transaction.swift */,
-				D85E1B631C8559320094E8E8 /* Account+CoreDataProperties.swift */,
-				D85E1B641C8559320094E8E8 /* Transaction+CoreDataProperties.swift */,
+				D8A17ACA1C87EB7000B0908D /* Account+CoreDataProperties.swift */,
+				D8A17ACB1C87EB7000B0908D /* Transaction+CoreDataProperties.swift */,
+				D8A17ACC1C87EB7000B0908D /* Settings+CoreDataProperties.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -150,6 +166,7 @@
 			isa = PBXProject;
 			attributes = {
 				KnownAssetTags = (
+					mainScreen,
 					transactionList,
 				);
 				LastSwiftUpdateCheck = 0720;
@@ -187,6 +204,7 @@
 				D8C7A9A01C5F0F0E00B37FAB /* LaunchScreen.storyboard in Resources */,
 				D8C7A9C01C5F380400B37FAB /* triangle.png in Resources */,
 				D8C7A99D1C5F0F0E00B37FAB /* Assets.xcassets in Resources */,
+				D8A17AD31C8A115800B0908D /* Initial.storyboard in Resources */,
 				D8C7A9BF1C5F380400B37FAB /* square.png in Resources */,
 				D8C7A99B1C5F0F0E00B37FAB /* Main.storyboard in Resources */,
 				D8C7A9BE1C5F380400B37FAB /* circle.png in Resources */,
@@ -200,18 +218,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A17AD51C8A120C00B0908D /* InitialViewController.swift in Sources */,
 				D8C7A9981C5F0F0E00B37FAB /* AcctViewController.swift in Sources */,
-				D85E1B651C8559320094E8E8 /* Account+CoreDataProperties.swift in Sources */,
 				D85E1B5D1C7D72360094E8E8 /* Account.swift in Sources */,
 				D85E1B5F1C7D72360094E8E8 /* Transaction.swift in Sources */,
 				D8C7A9B31C5F211A00B37FAB /* TransactionCache.swift in Sources */,
 				D8C7A9941C5F0F0E00B37FAB /* AppDelegate.swift in Sources */,
 				D8C7A9B11C5F210E00B37FAB /* AccountCache.swift in Sources */,
+				D8A17ACD1C87EB7000B0908D /* Account+CoreDataProperties.swift in Sources */,
 				D85241AE1C704A42007CE555 /* SummaryManager.swift in Sources */,
-				D85E1B661C8559320094E8E8 /* Transaction+CoreDataProperties.swift in Sources */,
+				D8A17ACF1C87EB7000B0908D /* Settings+CoreDataProperties.swift in Sources */,
+				D8A17AC81C87EB3900B0908D /* Settings.swift in Sources */,
 				D85E1B621C8557EA0094E8E8 /* BudgetCD.xcdatamodeld in Sources */,
 				D8C7A9AA1C5F158400B37FAB /* TransViewController.swift in Sources */,
 				D8C7A9961C5F0F0E00B37FAB /* SummaryViewController.swift in Sources */,
+				D8A17ACE1C87EB7000B0908D /* Transaction+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

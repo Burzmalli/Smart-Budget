@@ -25,6 +25,8 @@ class SummaryManager
     static let AcctURL = DocumentsDirectory.URLByAppendingPathComponent("accounts")
     static let TransURL = DocumentsDirectory.URLByAppendingPathComponent("transactions")
     
+    static var Fetched = false
+    
     //Instantiates the managedObjectContext, if nil, and then returns it
     static func GetContext()->NSManagedObjectContext
     {
@@ -39,6 +41,11 @@ class SummaryManager
     //Loads any existing accounts and transactions from core data
     static func FetchData()->Bool
     {
+        if(Fetched)
+        {
+            return true;
+        }
+        
         var fetchRequest = NSFetchRequest(entityName: "Account")
         
         do
@@ -51,19 +58,25 @@ class SummaryManager
             return false
         }
         
+        if(acctCache.Accounts.count < 1)
+        {
+            return false
+        }
+        
         fetchRequest = NSFetchRequest(entityName: "Transaction")
         
         do
         {
             let results = try GetContext().executeFetchRequest(fetchRequest)
             transCache.Transactions = results as! [Transaction]
+            Fetched = true
         }
         catch
         {
-            return false
+            Fetched = false
         }
         
-        return true
+        return Fetched
     }
     
     //Updates the summary information based on the existing accounts and

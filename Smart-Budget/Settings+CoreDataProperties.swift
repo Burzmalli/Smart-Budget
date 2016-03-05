@@ -1,5 +1,5 @@
 //
-//  Account+CoreDataProperties.swift
+//  Settings+CoreDataProperties.swift
 //  Smart-Budget
 //
 //  Created by Joseph Williams on 3/2/16.
@@ -12,12 +12,9 @@
 import Foundation
 import CoreData
 
-extension Account {
+extension Settings {
 
-    @NSManaged var accountId: NSNumber?
-    @NSManaged var active: NSNumber?
-    @NSManaged var name: String?
-    @NSManaged var startingBalance: NSNumber?
-    @NSManaged var transactions: NSSet?
+    @NSManaged var username: String?
+    @NSManaged var authenticate: NSNumber?
 
 }

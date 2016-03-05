@@ -18,6 +18,8 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet weak var transDate: UIDatePicker!
     
+    @IBOutlet weak var transCategory: UITextField!
+    
     @IBOutlet weak var transactionList: UITableView!
     
     @IBOutlet weak var acctPicker: UIPickerView!
@@ -30,6 +32,7 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
         aTransaction.name = transName.text
         aTransaction.amount = NSNumber(double: Double(transAmount.text!)!)
         aTransaction.date = transDate.date
+        aTransaction.category = transCategory.text
         aTransaction.account = selectedAccount
         aTransaction.recurring = NSNumber(bool:recurringSwitch.on)
         aTransaction.endDate = NSDate.distantFuture()
@@ -43,6 +46,7 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
         aTransaction.name = transName.text
         aTransaction.amount = NSNumber(double: Double(transAmount.text!)!)
         aTransaction.date = transDate.date
+        aTransaction.category = transCategory.text
         aTransaction.account = selectedAccount
         aTransaction.recurring = NSNumber(bool:recurringSwitch.on)
         SummaryManager.transCache.DeleteTransaction(aTransaction)
