@@ -194,7 +194,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Summary" image="circle.png" id="acW-dT-cKf" userLabel="Summary"/>
+                    <tabBarItem key="tabBarItem" title="Summary" image="Summary.png" id="acW-dT-cKf" userLabel="Summary"/>
                     <connections>
                         <outlet property="lastAccount" destination="O60-9u-p8Y" id="xmK-Rd-ffG"/>
                         <outlet property="lastDate" destination="9nb-fk-xDL" id="f6T-ly-eTX"/>
@@ -322,7 +322,7 @@
                             <constraint firstItem="KfD-Xg-aNz" firstAttribute="centerX" secondItem="POF-Zo-ilg" secondAttribute="centerX" id="ote-Li-4Dw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Accounts" image="square.png" id="cPa-gy-q4n" userLabel="Accounts"/>
+                    <tabBarItem key="tabBarItem" title="Accounts" image="Accounts.png" id="cPa-gy-q4n" userLabel="Accounts"/>
                     <connections>
                         <outlet property="accountList" destination="5BV-dE-qeq" id="UgK-5c-Gt6"/>
                         <outlet property="acctBalance" destination="dkl-kK-8QL" id="PkU-0h-uyA"/>
@@ -496,7 +496,7 @@
                             <constraint firstItem="XYc-4P-LZU" firstAttribute="centerX" secondItem="vLo-Xp-J2H" secondAttribute="centerX" id="y1V-9w-94j"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Transactions" image="triangle.png" id="Y8B-IP-Y9m" userLabel="Transactions"/>
+                    <tabBarItem key="tabBarItem" title="Transactions" image="Transactions.png" id="Y8B-IP-Y9m" userLabel="Transactions"/>
                     <connections>
                         <outlet property="acctPicker" destination="ZHv-jG-FRN" id="zwE-6u-MJu"/>
                         <outlet property="recurringSwitch" destination="OHx-I8-xhp" id="QV8-c2-HHi"/>
@@ -510,6 +510,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKP-D2-aOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="1035"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="MWZ-Cu-rkO">
+            <objects>
+                <viewController id="z3s-wr-hvh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eDb-Pi-K85"/>
+                        <viewControllerLayoutGuide type="bottom" id="EXL-dt-gTh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xqm-Yc-Oha">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings.png" id="cKs-Gy-OwC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77C-kN-gHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763" y="1780"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -525,6 +544,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="pqz-gE-1gv" kind="relationship" relationship="viewControllers" id="tEi-gX-DC5"/>
+                        <segue destination="z3s-wr-hvh" kind="relationship" relationship="viewControllers" id="75g-Gv-bjP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -533,8 +553,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circle.png" width="36" height="36"/>
-        <image name="square.png" width="36" height="36"/>
-        <image name="triangle.png" width="36" height="31"/>
+        <image name="Accounts.png" width="21" height="30"/>
+        <image name="Settings.png" width="30" height="30"/>
+        <image name="Summary.png" width="24" height="30"/>
+        <image name="Transactions.png" width="30" height="30"/>
     </resources>
 </document>

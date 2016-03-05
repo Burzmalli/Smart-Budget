@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D8520F971C8B49C4003665FE /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8520F961C8B49C4003665FE /* SettingsManager.swift */; };
+		D8520F9C1C8B9740003665FE /* Accounts.png in Resources */ = {isa = PBXBuildFile; fileRef = D8520F981C8B9740003665FE /* Accounts.png */; };
+		D8520F9D1C8B9740003665FE /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D8520F991C8B9740003665FE /* Settings.png */; };
+		D8520F9E1C8B9740003665FE /* Summary.png in Resources */ = {isa = PBXBuildFile; fileRef = D8520F9A1C8B9740003665FE /* Summary.png */; };
+		D8520F9F1C8B9740003665FE /* Transactions.png in Resources */ = {isa = PBXBuildFile; fileRef = D8520F9B1C8B9740003665FE /* Transactions.png */; };
 		D85241AE1C704A42007CE555 /* SummaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85241AD1C704A42007CE555 /* SummaryManager.swift */; };
 		D85E1B501C7D5A610094E8E8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */; };
 		D85E1B5D1C7D72360094E8E8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B591C7D72360094E8E8 /* Account.swift */; };
@@ -36,6 +40,10 @@
 
 /* Begin PBXFileReference section */
 		D8520F961C8B49C4003665FE /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		D8520F981C8B9740003665FE /* Accounts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Accounts.png; path = Images/Accounts.png; sourceTree = "<group>"; };
+		D8520F991C8B9740003665FE /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Settings.png; path = Images/Settings.png; sourceTree = "<group>"; };
+		D8520F9A1C8B9740003665FE /* Summary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Summary.png; path = Images/Summary.png; sourceTree = "<group>"; };
+		D8520F9B1C8B9740003665FE /* Transactions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Transactions.png; path = Images/Transactions.png; sourceTree = "<group>"; };
 		D85241AD1C704A42007CE555 /* SummaryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryManager.swift; sourceTree = "<group>"; };
 		D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D85E1B591C7D72360094E8E8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -135,6 +143,10 @@
 		D8C7A9B41C5F374C00B37FAB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D8520F981C8B9740003665FE /* Accounts.png */,
+				D8520F991C8B9740003665FE /* Settings.png */,
+				D8520F9A1C8B9740003665FE /* Summary.png */,
+				D8520F9B1C8B9740003665FE /* Transactions.png */,
 				D8C7A9BB1C5F380400B37FAB /* circle.png */,
 				D8C7A9BC1C5F380400B37FAB /* square.png */,
 				D8C7A9BD1C5F380400B37FAB /* triangle.png */,
@@ -205,12 +217,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C7A9A01C5F0F0E00B37FAB /* LaunchScreen.storyboard in Resources */,
+				D8520F9F1C8B9740003665FE /* Transactions.png in Resources */,
 				D8C7A9C01C5F380400B37FAB /* triangle.png in Resources */,
+				D8520F9E1C8B9740003665FE /* Summary.png in Resources */,
+				D8520F9D1C8B9740003665FE /* Settings.png in Resources */,
 				D8C7A99D1C5F0F0E00B37FAB /* Assets.xcassets in Resources */,
 				D8A17AD31C8A115800B0908D /* Initial.storyboard in Resources */,
 				D8C7A9BF1C5F380400B37FAB /* square.png in Resources */,
 				D8C7A99B1C5F0F0E00B37FAB /* Main.storyboard in Resources */,
 				D8C7A9BE1C5F380400B37FAB /* circle.png in Resources */,
+				D8520F9C1C8B9740003665FE /* Accounts.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,7 +51,11 @@ class SummaryManager
         do
         {
             let results = try GetContext().executeFetchRequest(fetchRequest)
-            SettingsManager.CreateSettings(results[0] as! Settings)
+            
+            if(results.count > 0)
+            {
+                SettingsManager.CreateSettings(results[results.count - 1] as! Settings)
+            }
         }
         catch
         {
@@ -60,6 +64,7 @@ class SummaryManager
         
         if(SettingsManager.MySettings == nil || SettingsManager.MySettings!.username == nil || SettingsManager.MySettings!.username!.isEmpty)
         {
+            SettingsManager.CreateSettings()
             return false;
         }
         

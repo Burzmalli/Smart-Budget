@@ -18,6 +18,15 @@ public class SettingsManager
         let entityDescription = NSEntityDescription.entityForName("Settings", inManagedObjectContext: SummaryManager.GetContext())
         
         MySettings = Settings(entity: entityDescription!, insertIntoManagedObjectContext: SummaryManager.GetContext())
+        
+        do
+        {
+            try SummaryManager.GetContext().save()
+        }
+        catch
+        {
+            
+        }
     }
     
     public static func CreateSettings(newSettings: Settings)
