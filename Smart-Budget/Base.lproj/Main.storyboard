@@ -514,7 +514,7 @@
         <!--Settings-->
         <scene sceneID="MWZ-Cu-rkO">
             <objects>
-                <viewController id="z3s-wr-hvh" sceneMemberID="viewController">
+                <viewController id="z3s-wr-hvh" customClass="SettingsViewController" customModule="Smart_Budget" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eDb-Pi-K85"/>
                         <viewControllerLayoutGuide type="bottom" id="EXL-dt-gTh"/>
@@ -522,9 +522,92 @@
                     <view key="view" contentMode="scaleToFill" id="Xqm-Yc-Oha">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZVe-Kj-UzB">
+                                <rect key="frame" x="213" y="63" width="174" height="294"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDT-yH-UwI">
+                                        <rect key="frame" x="55" y="0.0" width="64" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TMq-nh-zXV">
+                                        <rect key="frame" x="12" y="61" width="150" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmm-cQ-zhV">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xck-nw-qcN">
+                                                <rect key="frame" x="0.0" y="31" width="150" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="QXQ-Gl-tJS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xmm-cQ-zhV" firstAttribute="leading" secondItem="TMq-nh-zXV" secondAttribute="leading" id="rzF-U2-prW"/>
+                                            <constraint firstItem="xck-nw-qcN" firstAttribute="leading" secondItem="TMq-nh-zXV" secondAttribute="leading" id="vzW-p6-n1O"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C8R-4t-jNV">
+                                        <rect key="frame" x="0.0" y="162" width="174" height="62"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Require Authentication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xD-eI-gZO">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-6B-bZm">
+                                                <rect key="frame" x="63" y="31" width="50" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Vn4-6B-bZm" firstAttribute="leading" secondItem="C8R-4t-jNV" secondAttribute="leading" constant="63" id="1Rb-US-i2X"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="LDR-UY-Aj4">
+                                        <rect key="frame" x="6" y="264" width="162" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HI-o6-6hu">
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveSettings" destination="z3s-wr-hvh" eventType="touchUpInside" id="FMy-gd-Uv9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpE-u9-m4f">
+                                                <rect key="frame" x="69" y="0.0" width="93" height="30"/>
+                                                <state key="normal" title="Reset Budget"/>
+                                                <connections>
+                                                    <action selector="resetAll" destination="z3s-wr-hvh" eventType="touchUpInside" id="2Pk-QQ-7Nv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TMq-nh-zXV" firstAttribute="leading" secondItem="ZVe-Kj-UzB" secondAttribute="leading" constant="12" id="SHs-8d-9Ks"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZVe-Kj-UzB" firstAttribute="top" secondItem="eDb-Pi-K85" secondAttribute="bottom" constant="43" id="0Mk-Lw-hCb"/>
+                            <constraint firstItem="ZVe-Kj-UzB" firstAttribute="centerX" secondItem="Xqm-Yc-Oha" secondAttribute="centerX" id="sfO-bq-MtV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings.png" id="cKs-Gy-OwC"/>
+                    <connections>
+                        <outlet property="authenticate" destination="Vn4-6B-bZm" id="1Zw-UO-VAi"/>
+                        <outlet property="username" destination="xck-nw-qcN" id="KUh-WT-SQg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77C-kN-gHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -549,7 +632,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-504" y="1288"/>
         </scene>
     </scenes>
     <resources>

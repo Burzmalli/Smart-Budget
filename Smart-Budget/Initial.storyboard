@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7QD-no-u69">
                                 <rect key="frame" x="173" y="71" width="254" height="477"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Setup Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJS-by-PFn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJS-by-PFn">
                                         <rect key="frame" x="74" y="0.0" width="106" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -93,7 +93,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Account Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQe-36-sNt">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQe-36-sNt">
                                                 <rect key="frame" x="35" y="26" width="114" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -126,7 +126,7 @@
                                             <constraint firstItem="XQe-36-sNt" firstAttribute="leading" secondItem="qbb-a7-rFA" secondAttribute="leading" constant="35" id="Pbf-X7-rel"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c93-Dw-PYt">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c93-Dw-PYt">
                                         <rect key="frame" x="109" y="447" width="37" height="30"/>
                                         <state key="normal" title="Done"/>
                                         <connections>
@@ -150,6 +150,7 @@
                         <outlet property="authenticate" destination="OL5-Ms-zzG" id="S8x-uC-aRT"/>
                         <outlet property="firstAccountBalance" destination="Qgb-ZN-Pbi" id="Ioa-0y-yub"/>
                         <outlet property="firstAccountName" destination="Oeq-VM-SAY" id="S7n-Lz-IUJ"/>
+                        <outlet property="initialStack" destination="7QD-no-u69" id="S0d-eQ-hDl"/>
                         <outlet property="passwordStack" destination="8b1-o1-bVL" id="nbb-7z-NDH"/>
                         <outlet property="username" destination="hws-r7-r46" id="GKf-4y-t7P"/>
                     </connections>

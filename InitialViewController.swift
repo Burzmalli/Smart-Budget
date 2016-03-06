@@ -21,6 +21,8 @@ class InitialViewController: UIViewController {
     
     @IBOutlet weak var passwordStack: UIStackView!
     
+    @IBOutlet weak var initialStack: UIStackView!
+    
     private var newlyLaunched = true
     
     @IBAction func switched()
@@ -53,6 +55,7 @@ class InitialViewController: UIViewController {
         
         if(!newlyLaunched)
         {
+            initialStack.hidden = true
             authenticateUser()
         }
     }
@@ -67,7 +70,6 @@ class InitialViewController: UIViewController {
         var mainView: UIStoryboard!
         mainView = UIStoryboard(name: "Main", bundle: nil)
         let viewController = mainView.instantiateInitialViewController()! as UIViewController
-        //UIApplication.sharedApplication().windows[0].rootViewController = viewController
         self.presentViewController(viewController, animated: true, completion: nil)
     }
     

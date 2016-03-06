@@ -12,6 +12,7 @@
 		D8520F9D1C8B9740003665FE /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D8520F991C8B9740003665FE /* Settings.png */; };
 		D8520F9E1C8B9740003665FE /* Summary.png in Resources */ = {isa = PBXBuildFile; fileRef = D8520F9A1C8B9740003665FE /* Summary.png */; };
 		D8520F9F1C8B9740003665FE /* Transactions.png in Resources */ = {isa = PBXBuildFile; fileRef = D8520F9B1C8B9740003665FE /* Transactions.png */; };
+		D8520FA11C8BA31E003665FE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8520FA01C8BA31E003665FE /* SettingsViewController.swift */; };
 		D85241AE1C704A42007CE555 /* SummaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85241AD1C704A42007CE555 /* SummaryManager.swift */; };
 		D85E1B501C7D5A610094E8E8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */; };
 		D85E1B5D1C7D72360094E8E8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E1B591C7D72360094E8E8 /* Account.swift */; };
@@ -33,9 +34,6 @@
 		D8C7A9AA1C5F158400B37FAB /* TransViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9A91C5F158400B37FAB /* TransViewController.swift */; };
 		D8C7A9B11C5F210E00B37FAB /* AccountCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9B01C5F210E00B37FAB /* AccountCache.swift */; };
 		D8C7A9B31C5F211A00B37FAB /* TransactionCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A9B21C5F211A00B37FAB /* TransactionCache.swift */; };
-		D8C7A9BE1C5F380400B37FAB /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9BB1C5F380400B37FAB /* circle.png */; };
-		D8C7A9BF1C5F380400B37FAB /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9BC1C5F380400B37FAB /* square.png */; };
-		D8C7A9C01C5F380400B37FAB /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A9BD1C5F380400B37FAB /* triangle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +42,7 @@
 		D8520F991C8B9740003665FE /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Settings.png; path = Images/Settings.png; sourceTree = "<group>"; };
 		D8520F9A1C8B9740003665FE /* Summary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Summary.png; path = Images/Summary.png; sourceTree = "<group>"; };
 		D8520F9B1C8B9740003665FE /* Transactions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Transactions.png; path = Images/Transactions.png; sourceTree = "<group>"; };
+		D8520FA01C8BA31E003665FE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D85241AD1C704A42007CE555 /* SummaryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryManager.swift; sourceTree = "<group>"; };
 		D85E1B4F1C7D5A610094E8E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D85E1B591C7D72360094E8E8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -67,9 +66,6 @@
 		D8C7A9A91C5F158400B37FAB /* TransViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransViewController.swift; sourceTree = "<group>"; };
 		D8C7A9B01C5F210E00B37FAB /* AccountCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCache.swift; sourceTree = "<group>"; };
 		D8C7A9B21C5F211A00B37FAB /* TransactionCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCache.swift; sourceTree = "<group>"; };
-		D8C7A9BB1C5F380400B37FAB /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = Images/circle.png; sourceTree = "<group>"; };
-		D8C7A9BC1C5F380400B37FAB /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square.png; path = Images/square.png; sourceTree = "<group>"; };
-		D8C7A9BD1C5F380400B37FAB /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = triangle.png; path = Images/triangle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +115,7 @@
 				D8C7A9A91C5F158400B37FAB /* TransViewController.swift */,
 				D8A17AD21C8A115800B0908D /* Initial.storyboard */,
 				D8A17AD41C8A120C00B0908D /* InitialViewController.swift */,
+				D8520FA01C8BA31E003665FE /* SettingsViewController.swift */,
 			);
 			path = "Smart-Budget";
 			sourceTree = "<group>";
@@ -147,9 +144,6 @@
 				D8520F991C8B9740003665FE /* Settings.png */,
 				D8520F9A1C8B9740003665FE /* Summary.png */,
 				D8520F9B1C8B9740003665FE /* Transactions.png */,
-				D8C7A9BB1C5F380400B37FAB /* circle.png */,
-				D8C7A9BC1C5F380400B37FAB /* square.png */,
-				D8C7A9BD1C5F380400B37FAB /* triangle.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -218,14 +212,11 @@
 			files = (
 				D8C7A9A01C5F0F0E00B37FAB /* LaunchScreen.storyboard in Resources */,
 				D8520F9F1C8B9740003665FE /* Transactions.png in Resources */,
-				D8C7A9C01C5F380400B37FAB /* triangle.png in Resources */,
 				D8520F9E1C8B9740003665FE /* Summary.png in Resources */,
 				D8520F9D1C8B9740003665FE /* Settings.png in Resources */,
 				D8C7A99D1C5F0F0E00B37FAB /* Assets.xcassets in Resources */,
 				D8A17AD31C8A115800B0908D /* Initial.storyboard in Resources */,
-				D8C7A9BF1C5F380400B37FAB /* square.png in Resources */,
 				D8C7A99B1C5F0F0E00B37FAB /* Main.storyboard in Resources */,
-				D8C7A9BE1C5F380400B37FAB /* circle.png in Resources */,
 				D8520F9C1C8B9740003665FE /* Accounts.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +240,7 @@
 				D8A17ACF1C87EB7000B0908D /* Settings+CoreDataProperties.swift in Sources */,
 				D8A17AC81C87EB3900B0908D /* Settings.swift in Sources */,
 				D85E1B621C8557EA0094E8E8 /* BudgetCD.xcdatamodeld in Sources */,
+				D8520FA11C8BA31E003665FE /* SettingsViewController.swift in Sources */,
 				D8520F971C8B49C4003665FE /* SettingsManager.swift in Sources */,
 				D8C7A9AA1C5F158400B37FAB /* TransViewController.swift in Sources */,
 				D8C7A9961C5F0F0E00B37FAB /* SummaryViewController.swift in Sources */,
