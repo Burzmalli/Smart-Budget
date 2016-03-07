@@ -9,6 +9,7 @@
     </entity>
     <entity name="Settings" representedClassName=".Settings" syncable="YES">
         <attribute name="authenticate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="useTouchId" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
@@ -24,7 +25,7 @@
     </entity>
     <elements>
         <element name="Account" positionX="-45" positionY="0" width="128" height="118"/>
-        <element name="Settings" positionX="54" positionY="54" width="128" height="90"/>
+        <element name="Settings" positionX="54" positionY="54" width="128" height="105"/>
         <element name="Transaction" positionX="160" positionY="-6" width="128" height="165"/>
     </elements>
 </model>

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hJ7-ij-Rkw">
-                                <rect key="frame" x="221" y="234" width="158" height="132"/>
+                                <rect key="frame" x="221" y="234" width="158" height="192"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sc-TU-QMk">
                                         <rect key="frame" x="22" y="0.0" width="114" height="21"/>
@@ -38,8 +38,15 @@
                                             <constraint firstAttribute="width" constant="150" id="567-5g-tPi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJF-vw-PgX">
+                                        <rect key="frame" x="60" y="162" width="38" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="login" destination="VrB-Zp-PnF" eventType="touchUpInside" id="Lun-K0-VaS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7QD-no-u69">
@@ -66,7 +73,7 @@
                                                     <constraint firstAttribute="width" constant="150" id="7u0-Fx-tuP"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -100,13 +107,13 @@
                                                             <constraint firstAttribute="width" constant="150" id="opw-dE-zgg"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="OL5-Ms-zzG" firstAttribute="leading" secondItem="HNA-vJ-9yT" secondAttribute="leading" constant="66" id="GPr-R2-4Gl"/>
+                                            <constraint firstItem="OL5-Ms-zzG" firstAttribute="leading" secondItem="HNA-vJ-9yT" secondAttribute="leading" constant="66" id="XwH-wf-gNE"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qbb-a7-rFA">
@@ -130,7 +137,7 @@
                                                     <constraint firstAttribute="width" constant="150" id="Ni3-oO-2Mo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k0-mD-mRQ">
                                                 <rect key="frame" x="29" y="87" width="126" height="21"/>
@@ -144,7 +151,7 @@
                                                     <constraint firstAttribute="width" constant="100" id="qEF-uI-JGW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -168,9 +175,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7QD-no-u69" firstAttribute="top" secondItem="Gcb-lW-5sJ" secondAttribute="bottom" constant="51" id="BVx-94-3Vu"/>
-                            <constraint firstItem="hJ7-ij-Rkw" firstAttribute="centerX" secondItem="WuW-Ez-2Ks" secondAttribute="centerX" id="Ntg-6B-KX6"/>
-                            <constraint firstItem="hJ7-ij-Rkw" firstAttribute="centerY" secondItem="WuW-Ez-2Ks" secondAttribute="centerY" id="Rm4-hA-LYH"/>
+                            <constraint firstItem="hJ7-ij-Rkw" firstAttribute="centerX" secondItem="7QD-no-u69" secondAttribute="centerX" id="Hmn-V9-Efh"/>
                             <constraint firstItem="7QD-no-u69" firstAttribute="centerX" secondItem="WuW-Ez-2Ks" secondAttribute="centerX" id="U1K-rp-Kts"/>
+                            <constraint firstItem="Hx6-mp-hgV" firstAttribute="top" secondItem="hJ7-ij-Rkw" secondAttribute="bottom" constant="174" id="sIs-tK-ntB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -180,6 +187,7 @@
                         <outlet property="firstAccountName" destination="Oeq-VM-SAY" id="S7n-Lz-IUJ"/>
                         <outlet property="initialStack" destination="7QD-no-u69" id="S0d-eQ-hDl"/>
                         <outlet property="passwordAuthenticate" destination="6qE-X7-kdQ" id="Ajo-CB-y7s"/>
+                        <outlet property="passwordEntry" destination="6bd-St-TcX" id="3yK-oP-Bzh"/>
                         <outlet property="passwordStack" destination="8b1-o1-bVL" id="nbb-7z-NDH"/>
                         <outlet property="username" destination="hws-r7-r46" id="GKf-4y-t7P"/>
                         <outlet property="welcomeLabel" destination="8sc-TU-QMk" id="HUx-Ai-vpg"/>

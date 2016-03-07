@@ -17,5 +17,6 @@ extension Settings {
     @NSManaged var username: String?
     @NSManaged var authenticate: NSNumber?
     @NSManaged var useTouchId: NSNumber?
+    @NSManaged var password: String?
 
 }

@@ -25,11 +25,23 @@ class InitialViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
+    @IBOutlet weak var passwordEntry: UITextField!
+    
     @IBOutlet weak var passwordAuthenticate: UITextField!
     
     @IBOutlet weak var authenticatePasswordStack: UIStackView!
     
     private var newlyLaunched = true
+    
+    private var touchIdEnabled = false
+    
+    @IBAction func login()
+    {
+        if(passwordAuthenticate.text == SettingsManager.MySettings?.password)
+        {
+            transitionToMainScreen()
+        }
+    }
     
     @IBAction func switched()
     {
@@ -50,6 +62,7 @@ class InitialViewController: UIViewController {
         //Set settings values
         SettingsManager.MySettings?.username = username.text
         SettingsManager.MySettings?.authenticate = authenticate.on
+        SettingsManager.MySettings?.password = passwordEntry.text
         
         //Create initial account
         let anAccount = SummaryManager.GetAccount()
@@ -67,11 +80,14 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Check if existing data is present
         newlyLaunched = !SummaryManager.FetchData()
         
         if(!newlyLaunched)
         {
+            //If previous data exists, authenticate (if set) or show main screen
             initialStack.hidden = true
+            authenticatePasswordStack.hidden = false
             if(SettingsManager.MySettings!.authenticate!.boolValue)
             {
                 authenticateUser()
@@ -83,6 +99,9 @@ class InitialViewController: UIViewController {
         }
         else
         {
+            //Otherwise, show setup fields
+            initialStack.hidden = false
+            authenticatePasswordStack.hidden = true
             SettingsManager.CreateSettings()
         }
     }
@@ -92,22 +111,22 @@ class InitialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Loads the main screen
     func transitionToMainScreen()
     {
-        var mainView: UIStoryboard!
-        mainView = UIStoryboard(name: "Main", bundle: nil)
+        //Get the Main storyboard and present it
+        let mainView = UIStoryboard(name: "Main", bundle: nil)
         let viewController = mainView.instantiateInitialViewController()! as UIViewController
         self.presentViewController(viewController, animated: true, completion: nil)
     }
     
+    //Function that handles the authentication evaluatio
     func evalAuthenticateSuccess(success: Bool, error: NSError?)
     {
         if(success)
         {
-            if(!newlyLaunched)
-            {
-                transitionToMainScreen()
-            }
+            //If successful load main screen
+            transitionToMainScreen()
         }
     }
     

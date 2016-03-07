@@ -57,10 +57,10 @@ class Transaction: NSManagedObject
         
         if(account == nil)
         {
-            return name! + "::$" + amt + "::" + date
+            return name! + "::" + category! + "::$" + amt + "::" + date
         }
         
-        return name! + "::$" + amt + "::" + date + "::" + account!.name!
+        return name! + "::" + category! + "::$" + amt + "::" + date + "::" + account!.name!
     }
 
     //Returns the number of times that a transaction has recurred

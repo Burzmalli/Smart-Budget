@@ -36,6 +36,7 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
         aTransaction.account = selectedAccount
         aTransaction.recurring = NSNumber(bool:recurringSwitch.on)
         aTransaction.endDate = NSDate.distantFuture()
+        
         SummaryManager.transCache.CreateTransaction(aTransaction)
         transactionList.reloadData()
     }
@@ -49,6 +50,7 @@ class TransViewController: UIViewController, UITableViewDataSource, UITableViewD
         aTransaction.category = transCategory.text
         aTransaction.account = selectedAccount
         aTransaction.recurring = NSNumber(bool:recurringSwitch.on)
+        
         SummaryManager.transCache.DeleteTransaction(aTransaction)
         transactionList.reloadData()
     }
