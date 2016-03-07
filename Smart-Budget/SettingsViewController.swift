@@ -14,25 +14,49 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var authenticate: UISwitch!
     
+    @IBOutlet weak var passwordStack: UIStackView!
+    
+    @IBOutlet weak var passwordField: UITextField!
+    
+    @IBAction func authenticateSwitched()
+    {
+        if(authenticate.on)
+        {
+            passwordStack.hidden = false
+        }
+        else
+        {
+            passwordStack.hidden = true
+        }
+    }
+    
     @IBAction func saveSettings()
     {
         SettingsManager.MySettings?.username = username.text
         
         SettingsManager.MySettings?.authenticate = authenticate.on
+        
+        SummaryManager.SaveContext()
     }
     
     @IBAction func resetAll()
     {
+        //Create warning to user that all data will be reset
         let resetText = "All budget data and settings will be lost. Continue?"
-        let refreshAlert = UIAlertController(title: "Reset", message: resetText, preferredStyle: UIAlertControllerStyle.Alert)
+        let resetAlert = UIAlertController(title: "Reset", message: resetText, preferredStyle: UIAlertControllerStyle.Alert)
         
-        refreshAlert.addAction(UIAlertAction(title: "Yes", style:.Default, handler: { (action: UIAlertAction!) in
+        //If Yes is selected, call resetBudget
+        resetAlert.addAction(UIAlertAction(title: "Yes", style:.Default, handler: { (action: UIAlertAction!) in
             self.resetBudget()
         } ))
         
-        refreshAlert.addAction(UIAlertAction(title: "No", style:.Default, handler: { (action: UIAlertAction!) in
+        //If No, do nothing
+        resetAlert.addAction(UIAlertAction(title: "No", style:.Default, handler: { (action: UIAlertAction!) in
             return
         } ))
+        
+        //Display warning
+        self.presentViewController(resetAlert, animated: true, completion: nil)
     }
     
     func transitionToInitialScreen()
@@ -45,33 +69,30 @@ class SettingsViewController: UIViewController {
     
     func resetBudget()
     {
+        SummaryManager.GetContext().deleteObject(SettingsManager.MySettings!)
         
+        SummaryManager.SaveContext()
         
         transitionToInitialScreen()
     }
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         username.text = SettingsManager.MySettings!.username
         
         authenticate.on = (SettingsManager.MySettings!.authenticate?.boolValue)!
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(animated: Bool)
+    {
+        authenticate.on = (SettingsManager.MySettings?.authenticate?.boolValue)!
     }
-    */
+
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+    }
 
 }

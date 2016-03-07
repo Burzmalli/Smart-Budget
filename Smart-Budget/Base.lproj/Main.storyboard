@@ -564,13 +564,32 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-6B-bZm">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-6B-bZm">
                                                 <rect key="frame" x="63" y="31" width="50" height="31"/>
+                                                <connections>
+                                                    <action selector="authenticateSwitched" destination="z3s-wr-hvh" eventType="valueChanged" id="BDp-fZ-0jb"/>
+                                                </connections>
                                             </switch>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Csh-Ea-y1w">
+                                                <rect key="frame" x="12" y="62" width="150" height="0.0"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjz-BV-9aO">
+                                                        <rect key="frame" x="38" y="0.0" width="74" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9X-q4-A0U">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="0.0"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="nHz-8v-QZB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Vn4-6B-bZm" firstAttribute="leading" secondItem="C8R-4t-jNV" secondAttribute="leading" constant="63" id="1Rb-US-i2X"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="LDR-UY-Aj4">
                                         <rect key="frame" x="6" y="264" width="162" height="30"/>
@@ -606,6 +625,8 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings.png" id="cKs-Gy-OwC"/>
                     <connections>
                         <outlet property="authenticate" destination="Vn4-6B-bZm" id="1Zw-UO-VAi"/>
+                        <outlet property="passwordField" destination="Y9X-q4-A0U" id="JZh-xQ-DzL"/>
+                        <outlet property="passwordStack" destination="Csh-Ea-y1w" id="A2G-5N-YUz"/>
                         <outlet property="username" destination="xck-nw-qcN" id="KUh-WT-SQg"/>
                     </connections>
                 </viewController>

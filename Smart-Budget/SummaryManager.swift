@@ -166,4 +166,16 @@ class SummaryManager
         
         return aTransaction
     }
+    
+    static func SaveContext()
+    {
+        do
+        {
+            try GetContext().save()
+        }
+        catch
+        {
+            
+        }
+    }
 }

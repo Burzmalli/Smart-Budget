@@ -23,10 +23,18 @@ class InitialViewController: UIViewController {
     
     @IBOutlet weak var initialStack: UIStackView!
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    @IBOutlet weak var passwordAuthenticate: UITextField!
+    
+    @IBOutlet weak var authenticatePasswordStack: UIStackView!
+    
     private var newlyLaunched = true
     
     @IBAction func switched()
     {
+        //Show or hide password field depending on whether
+        //user wants to use authentication
         if(authenticate.on)
         {
             passwordStack.hidden = false
@@ -39,12 +47,20 @@ class InitialViewController: UIViewController {
     
     @IBAction func done()
     {
+        //Set settings values
+        SettingsManager.MySettings?.username = username.text
+        SettingsManager.MySettings?.authenticate = authenticate.on
+        
+        //Create initial account
         let anAccount = SummaryManager.GetAccount()
         anAccount.name = firstAccountName.text
         anAccount.startingBalance = NSNumber(double:Double(firstAccountBalance.text!)!)
         anAccount.active = NSNumber(bool: true)
         SummaryManager.acctCache.CreateAccount(anAccount)
         
+        SummaryManager.SaveContext()
+        
+        //Show main screen
         transitionToMainScreen()
     }
 
@@ -56,7 +72,18 @@ class InitialViewController: UIViewController {
         if(!newlyLaunched)
         {
             initialStack.hidden = true
-            authenticateUser()
+            if(SettingsManager.MySettings!.authenticate!.boolValue)
+            {
+                authenticateUser()
+            }
+            else
+            {
+                transitionToMainScreen()
+            }
+        }
+        else
+        {
+            SettingsManager.CreateSettings()
         }
     }
 
@@ -77,11 +104,7 @@ class InitialViewController: UIViewController {
     {
         if(success)
         {
-            if(newlyLaunched)
-            {
-                
-            }
-            else
+            if(!newlyLaunched)
             {
                 transitionToMainScreen()
             }
@@ -115,10 +138,14 @@ class InitialViewController: UIViewController {
         {
             if(newlyLaunched)
             {
-                
+                initialStack.hidden = false
+                authenticatePasswordStack.hidden = true
+            }
+            else
+            {
+                initialStack.hidden = true
+                authenticatePasswordStack.hidden = false
             }
         }
     }
-    
-    
 }

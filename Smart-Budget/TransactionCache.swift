@@ -17,14 +17,7 @@ class TransactionCache: NSObject
     {
         Transactions.append(thisTransaction);
         
-        do
-        {
-            try SummaryManager.GetContext().save()
-        }
-        catch
-        {
-            
-        }
+        SummaryManager.SaveContext()
         
         return true;
     }
@@ -44,15 +37,8 @@ class TransactionCache: NSObject
             && entry.date == thisTransaction.date)
             {
                 Transactions.removeAtIndex(idx);
-                do
-                {
-                    SummaryManager.GetContext().deleteObject(entry)
-                    try SummaryManager.GetContext().save()
-                }
-                catch
-                {
-                    return false
-                }
+                SummaryManager.GetContext().deleteObject(entry)
+                SummaryManager.SaveContext()
                 break;
             }
             idx++;

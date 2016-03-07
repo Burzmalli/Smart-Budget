@@ -20,14 +20,7 @@ class AccountCache: NSObject
         {
             Accounts.append(thisAccount);
             
-            do
-            {
-                try SummaryManager.GetContext().save()
-            }
-            catch
-            {
-                
-            }
+            SummaryManager.SaveContext()
             
             return true;
         }
@@ -53,14 +46,7 @@ class AccountCache: NSObject
             {
                 Accounts.removeAtIndex(idx);
                 thisAccount.active = false
-                do
-                {
-                    try SummaryManager.GetContext().save()
-                }
-                catch
-                {
-                    return false
-                }
+                SummaryManager.SaveContext()
                 break;
             }
             idx++;
